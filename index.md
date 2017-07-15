@@ -42,7 +42,7 @@ synchronization, scheduling, multiprogramming, memory management, and file syste
 #### Textbooks
 {: .sec-header}
 
-[![OSTEP](/assets/image/ostep.jpg){:width="120px"}](http://www.ostep.org/)
+[![OSTEP]({{ "/assets/image/ostep.jpg" | relative_url }}){:width="120px"}](http://www.ostep.org/)
 
 ###### Operating Systems: Three Easy Pieces, by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau, *available freely [online](http://www.ostep.org)!*{: .text-danger}
 
@@ -89,8 +89,8 @@ Collaboration
 
 Cheating
 : **Don't do it**{: .text-danger}. All students are required to know and adhere to the 
-  CS Department [Academic Integrity Code](https://www.cs.jhu.edu/academic-integrity-code) and 
-  JHU university policies. Failure to do so will result in serious consequences outlined in the policy.
+  JHU CS Department [Academic Integrity Code](https://www.cs.jhu.edu/academic-integrity-code) and 
+  university policies. Failure to do so will result in serious consequences outlined in the policy.
   Simply stated, do no cheat. The consequences are very high for the time/effort saved.
 {: .dl-horizontal}
 
