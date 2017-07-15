@@ -3,7 +3,7 @@
     <p class="navbar-text pull-right" style="font-size:15px;color:white;padding-right:10px;">Fall 2017</li>
     <ul class="nav navbar-nav">
       <li>
-        <a style="color:white;font-size:25px" href="/index.html"><span style="font-weight:bold;">CS 318</span>: Principles of Operating Systems</a>
+        <a style="color:white;font-size:22px" href="/index.html"><span style="font-weight:bold;">CS 318</span>: Principles of Operating Systems</a>
       </li>
     </ul>
   </div>
@@ -27,7 +27,7 @@
               {% if page.url contains item.url %}
                 {% assign class = 'active' %}
               {% endif %}
-              <li class="{{ class }}"><a href="{{ item.url }}">{{ item.title }}</a></li>
+              <li class="{{ class }}"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
             {% endfor %}
           </ul>
         </div>
