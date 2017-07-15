@@ -50,13 +50,15 @@ body {
   padding-bottom: 40px;
 }
 
+dd {
+  margin-bottom: 20px;
+}
 .dl-horizontal dt {
   width: 100px;
   text-align: left;
 }
 .dl-horizontal dd {
   margin-left: 110px;
-  margin-bottom: 20px;
 }
 .navbar-default .navbar-nav > li > a:hover {
   color: #ffffff;
@@ -109,7 +111,21 @@ h6 {
 }
 .table th, .table td { 
 }
-
+#schedule-table tbody tr:nth-child(18) {
+  background-color: #9ed688;
+}
+#schedule-table tbody tr:nth-child(19) {
+  background-color: #9ed688;
+}
+#schedule-table tbody tr:nth-child(24) {
+  background-color: #9ed688;
+}
+#schedule-table tbody tr:nth-child(25) {
+  background-color: #9ed688;
+}
+#schedule-table tbody tr:nth-child(30) {
+  background-color: #efeca6;
+}
 td.success, th.success {
   background-color: #dff0d8;
 }

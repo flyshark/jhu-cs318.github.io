@@ -12,6 +12,15 @@ is a departure point for research in operating and distributed systems.
 Specifically, the course introduces the concepts of processes, concurrency, 
 synchronization, scheduling, multiprogramming, memory management, and file systems.
 
+Prerequisites
+: 600.120 (Intermediate Programming), 600.211 (Unix Systems Programming), 600.226 (Data Structures), 600.233 (Computer Systems Fundamentals). This course involves significant kernel programming tasks. You must 1). be comfortable and fluent in programming in low-level languages (C and x86 assembly in particular); 2). have experiences of developing in UNIX environment. If neither applies to you, you should consider carefully about taking this class.
+
+To Graduate Students
+: Even though this course is partly listed with 600.618, it is mainly designed for as the first course for OS. Most of the graduate students
+  should have taken the OS class in their undergraduate education. To avoid waste your time, you should only take this class if
+  you feel there is substantial benefit to you (e.g., your undergrad OS class was too theoretical and you want to do some serious 
+  OS projects). The real graduate-level OS class is 600.718, which will be offered in the future. 600.718 will be a research-focused course 
+  with extensive discussions on classic and recent OS papers ([example](http://cseweb.ucsd.edu/classes/wi17/cse221-a/readings.html)). 
 
 #### Staff
 {: .sec-header}
