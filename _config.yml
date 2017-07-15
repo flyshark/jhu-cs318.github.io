@@ -17,3 +17,14 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+navigation:
+  - title: Home
+    url: /index.html
+  - title: Syllabus
+    url: /syllabus.html
+  - title: Homework
+    url: /homework.html
+  - title: Projects
+    url: /projects.html
+  - title: Piazza
+    url: https://piazza.com/jhu/fall2017/600.318
