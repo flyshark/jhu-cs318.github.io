@@ -1,0 +1,19 @@
+title: "CS 318: Principles of Operating Systems, Fall 2017"
+email: huang@cs.jhu.edu
+description: > # this means to ignore newlines until "baseurl:"
+  Operating System course 2017 Fall semester at Johns Hopkins University.
+  Instructor Prof. Ryan Huang.
+meta_desc: jhu cs 318 fall 2017
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: ryanphuang
+github_username:  ryanphuang
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
