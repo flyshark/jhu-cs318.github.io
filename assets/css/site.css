@@ -58,6 +58,11 @@ body {
   margin-left: 110px;
   margin-bottom: 20px;
 }
+.navbar-default .navbar-nav > li > a:hover {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #0088cc;
+}
 .navbar-default .navbar-nav > .active > a:hover {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
@@ -81,11 +86,23 @@ h4 {
   padding-left: 5px;
   line-height: 35px;
 }
+h5 {
+  font-size: 18px;
+  padding-left: 5px;
+  font-weight: bold;
+}
+h6 {
+  font-size: 16px;
+  padding-left: 5px;
+}
 .section {
   margin-bottom: 25px;
 }
 .sec-header {
+  padding: 5px;
   background-color: #e2f1e9;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .table th, .table td { 
 }
