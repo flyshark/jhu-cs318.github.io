@@ -2,41 +2,33 @@
 layout: home
 ---
 
-## Overview
+## Course Overview
 
-
-This course gives an introduction to the basic concepts used to structure modern 
-computer operating systems. The goal of the class is to explain those concepts 
-and principles that are likely to survive for many years to come. The course 
-is a departure point for research in operating and distributed systems. 
-Specifically, the course introduces the concepts of processes, concurrency, 
+This course gives an introduction to the basic concepts and core principles
+used to structure modern computer operating systems. The goal of the class is to 
+explain those concepts and principles that are likely to survive for many years 
+to come. The course is a departure point for research in operating and distributed 
+systems. Specifically, the course introduces the concepts of processes, concurrency, 
 synchronization, scheduling, multiprogramming, memory management, and file systems.
 
 Prerequisites
-: 600.120 (Intermediate Programming), 600.211 (Unix Systems Programming), 600.226 (Data Structures), 600.233 (Computer Systems Fundamentals). This course involves significant kernel programming tasks. You must 1). be comfortable and fluent in programming in low-level languages (C and x86 assembly in particular); 2). have experiences of developing in UNIX environment. If neither applies to you, you should consider carefully about taking this class.
+: 600.120 (Intermediate Programming), 600.211 (Unix Systems Programming), 600.226 (Data Structures), 600.233 (Computer Systems Fundamentals). <span class="text-danger">This course involves significant kernel programming tasks</span>. You should: 1). be comfortable and fluent in programming in low-level languages (C and x86 assembly in particular); 2). have experiences of developing in UNIX environment; (3). afford considerable time to commit to the course.
 
-To Graduate Students
-: Even though this course is partly listed with 600.618, it is mainly designed for as the first course for OS. Most of the graduate students
-  should have taken the OS class in their undergraduate education. To avoid waste your time, you should only take this class if
-  you feel there is substantial benefit to you (e.g., your undergrad OS class was too theoretical and you want to do some serious 
-  OS projects). The real graduate-level OS class is 600.718, which will be offered in the future. 600.718 will be a research-focused course 
-  with extensive discussions on classic and recent OS papers ([example](http://cseweb.ucsd.edu/classes/wi17/cse221-a/readings.html)). 
+<hr>
 
 ## Staff
 
-##### Instructor
-
-| Name  | Email | Office | Office Hours|
-|-------|-------|--------|-------------|
-| [Ryan P. Huang](http://cs.jhu.edu/~huang) | huang@cs.jhu.edu | Malone 231 | TBD |
-{: .table}
-
-##### Teaching Assistant
-
-| Name  | Email | Office | Office Hours|
-|-------|-------|--------|-------------|
-| TBD   |       |        |             |
-{: .table}
+<dl class="staff">
+	<dt><h5>Instructor</h5></dt>
+	<dd><strong><a href="http://cs.jhu.edu/~huang">Ryan Huang</a></strong></dd>
+	<dd><b>Email: </b><a href="mailto:huang@cs.jhu.edu">huang@cs.jhu.edu</a></dd>
+	<dd><b>Address: </b>Malone 231</dd>
+	<dd><b>Office Hour: </b>TBD</dd>
+	<dt><h5>TA</h5></dt>
+	<dd>TBD</dd>
+	<dt><h5>Staff list</h5></dt>
+	<dd><a href="mailto:cs318-staff@cs.jhu.edu">cs318-staff@cs.jhu.edu</a></dd>
+</dl>
 
 ## Meetings
 
@@ -50,9 +42,9 @@ To Graduate Students
 
 [![OSTEP]({{ "/assets/image/ostep.jpg" | relative_url }}){:width="120px"}](http://www.ostep.org/)
 
-###### Operating Systems: Three Easy Pieces, by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau, *available freely [online](http://www.ostep.org)!*{: .text-danger}
+<h4>Operating Systems: Three Easy Pieces</h4> by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau, <b class="text-success">available <a href="http://www.ostep.org">online</a> for free!</b>
 
-Other textbooks recommended for this course (not required):
+**Other textbooks recommended for this course (but not required):**
 * [*Operating Systems: Principles and Practice, 2nd Edition (2014)*](http://recursivebooks.com), by Anderson and Dahlin, Recursive Books, ISBN 978-0985673529
 * [*Modern Operating Systems, 4th Edition (2014)*](https://www.amazon.com/Modern-Operating-Systems-Andrew-Tanenbaum/dp/013359162X), by Tanenbaum and Bos, Pearson, ISBN 978-0133591620 
 * [*Operating System Concepts, 8th Edition (2008)*](https://www.amazon.com/Operating-System-Concepts-Abraham-Silberschatz/dp/0470128720), by Silberschatz, Galvin and Gagne, Wiley, ISBN 978-0470128725.
@@ -74,9 +66,9 @@ Questions on examinations will be based on material covered in class, assigned r
 ## Grading
 
 Your final grade for the course will be based on the following weights:
-* Projects: 50%
-* Midterm: 20%
-* Final exam: 30%
+* **Projects:** 50%
+* **Midterm:** 20%
+* **Final exam:** 30%
 
 For the programming assignments, there are no partial credits. You must turn in working code.
 
@@ -88,14 +80,14 @@ Collaboration
   be completed individually. Projects may be completed in established 
   groups, and implementation approaches may be discussed across groups, 
   but programming code cannot be shared across groups.
-{: .dl-horizontal}
+{: .policy .dl-horizontal}
 
 Cheating
 : **Don't do it**{: .text-danger}. All students are required to know and adhere to the 
   JHU CS Department [Academic Integrity Code](https://www.cs.jhu.edu/academic-integrity-code) and 
   university policies. Failure to do so will result in serious consequences outlined in the policy.
   Simply stated, do no cheat. The consequences are very high for the time/effort saved.
-{: .dl-horizontal}
+{: .policy .dl-horizontal}
 
 
 ## Acknowledgments
