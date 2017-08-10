@@ -22,8 +22,7 @@ To Graduate Students
   OS projects). The real graduate-level OS class is 600.718, which will be offered in the future. 600.718 will be a research-focused course 
   with extensive discussions on classic and recent OS papers ([example](http://cseweb.ucsd.edu/classes/wi17/cse221-a/readings.html)). 
 
-#### Staff
-{: .sec-header}
+## Staff
 
 ##### Instructor
 
@@ -39,8 +38,7 @@ To Graduate Students
 | TBD   |       |        |             |
 {: .table}
 
-#### Meetings
-{: .sec-header}
+## Meetings
 
 | **Lecture:**               | Tuesday/Thursday 09:00am-10:15am <br> Shaffer Hall 301 |
 | **Discussion Section:**    | TBD                                                    |
@@ -48,8 +46,7 @@ To Graduate Students
 | **Final Exam:**            | TBD                                                    |
 {: .table .table-bordered .table-hover}
 
-#### Textbooks
-{: .sec-header}
+## Textbooks
 
 [![OSTEP]({{ "/assets/image/ostep.jpg" | relative_url }}){:width="120px"}](http://www.ostep.org/)
 
@@ -61,8 +58,7 @@ Other textbooks recommended for this course (not required):
 * [*Operating System Concepts, 8th Edition (2008)*](https://www.amazon.com/Operating-System-Concepts-Abraham-Silberschatz/dp/0470128720), by Silberschatz, Galvin and Gagne, Wiley, ISBN 978-0470128725.
 
 
-#### Organization
-{: .sec-header}
+## Organization
 
 This course is organized as a series of lectures taught by the instructors, assigned readings, discussion sections, homework,
 projects, and exams. They are complementary to each other, helping you reinforce learning on the core concepts in operating systems. 
@@ -75,8 +71,7 @@ Questions on examinations will be based on material covered in class, assigned r
 | **Exams:**    | Midterm examination and a final exam                                                       |
 {: .table}
 
-#### Grading
-{: .sec-header}
+## Grading
 
 Your final grade for the course will be based on the following weights:
 * Projects: 50%
@@ -85,8 +80,7 @@ Your final grade for the course will be based on the following weights:
 
 For the programming assignments, there are no partial credits. You must turn in working code.
 
-#### Policies
-{: .sec-header}
+## Policies
 
 Collaboration
 : Unless otherwise noted, all work must be completed individually. 
@@ -104,6 +98,5 @@ Cheating
 {: .dl-horizontal}
 
 
-#### Acknowledgments
-{: .sec-header}
+## Acknowledgments
 

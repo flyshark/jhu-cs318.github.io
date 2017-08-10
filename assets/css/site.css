@@ -118,9 +118,6 @@ h6 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-#schedule-table tbody tr:nth-child(4n+2), #schedule-table tbody tr:nth-child(4n+3) {
-  background-color: #f9f9f9;
-}
 .section > p, ul, ol {
   padding-left: 15px;
 }
