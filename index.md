@@ -2,8 +2,8 @@
 layout: home
 ---
 
-#### Overview
-{: .sec-header}
+## Overview
+
 
 This course gives an introduction to the basic concepts used to structure modern 
 computer operating systems. The goal of the class is to explain those concepts 

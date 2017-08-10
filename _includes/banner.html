@@ -1,36 +1,50 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <p class="navbar-text pull-right" style="font-size:15px;color:white;padding-right:10px;">Fall 2017</li>
-    <ul class="nav navbar-nav">
-      <li>
-        <a style="color:white;font-size:22px" href="/index.html"><span style="font-weight:bold;">CS 318</span>: Principles of Operating Systems</a>
-      </li>
-    </ul>
-  </div>
-</div>
-<header class="navbar navbar-fixed-top navbar-masthead bs-docs-navbar-masthead">
-    <!-- Fixed navbar -->
-    <nav class="navbar-default">
-      <div class="">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            {% for item in site.navigation %}
-              {% assign class = nil %}
-              {% if page.url contains item.url %}
-                {% assign class = 'active' %}
-              {% endif %}
-              <li class="{{ class }}"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-            {% endfor %}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <p class="navbar-text pull-right" style="font-size:15px;color:white;padding-right:10px;">Fall 2017</p>
+      <h3 style="color:#fff"><span style="font-weight:bold;">CS 318</span>: Principles of Operating Systems</h3>
+      <ul class="nav navbar-nav">
+        {% for item in site.navigation %}
+          {%- if page.url contains item.url -%}
+            {%- assign class = 'active' -%}
+          {%- elsif page.url == '/' and item.url == '/index.html' -%}
+            {%- assign class = 'active' -%}
+          {%- else -%}
+            {%- assign class = nil -%}
+          {%- endif -%}
+          {%- if item.dropdown -%}
+            {% if class %}
+              {%- assign class = class | append: ' dropdown' -%}
+            {% else %}
+              {%- assign class = 'dropdown' -%}
+            {% endif %}
+          {%- endif -%}
+        <li class="{{ class }}">
+          {% if item.dropdown -%}
+          <a href="{{ item.url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ item.title }} <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            {%- for dp in item.dropdown %}
+              {% if dp.title -%}
+            <li><a href="{{ dp.url }}">{{ dp.title }}</a></li>
+              {%- else -%}
+            <li role="separator" class="divider"></li>
+              {%- endif -%}
+            {%- endfor %}
           </ul>
-        </div>
-      </div>
-    </nav>
-</header>
+          {%- else -%}
+          <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          {%- endif %}
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

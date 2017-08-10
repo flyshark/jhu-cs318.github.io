@@ -13,7 +13,7 @@ github_username:  ryanphuang
 # Build settings
 markdown: kramdown
 theme: minima
-gems:
+plugins:
   - jekyll-feed
 exclude:
   - Gemfile
@@ -27,6 +27,18 @@ navigation:
     url: /homework.html
   - title: Projects
     url: /projects.html
+    dropdown:
+      - title: Grading and Policies
+        url: #
+      - title: Guide
+        url: #
+      - separator: true
+      - title: Lab 1 
+        url: #
+      - title: Lab 2 
+        url: #
+      - title: Lab 3 
+        url: #
   - title: References
     url: /references.html
   - title: Piazza
