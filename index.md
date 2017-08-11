@@ -90,5 +90,3 @@ Cheating
 {: .policy .dl-horizontal}
 
 
-## Acknowledgments
-
