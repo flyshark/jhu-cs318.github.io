@@ -19,14 +19,14 @@ Prerequisites
 ## Staff
 
 <dl class="staff">
-	<dt><h5>Instructor</h5></dt>
+	<dt><h4>Instructor</h4></dt>
 	<dd><strong><a href="http://cs.jhu.edu/~huang">Ryan Huang</a></strong></dd>
 	<dd><b>Email: </b><a href="mailto:huang@cs.jhu.edu">huang@cs.jhu.edu</a></dd>
 	<dd><b>Address: </b>Malone 231</dd>
 	<dd><b>Office Hour: </b>TBD</dd>
-	<dt><h5>TA</h5></dt>
+	<dt><h4>TA</h4></dt>
 	<dd>TBD</dd>
-	<dt><h5>Staff list</h5></dt>
+	<dt><h4>Staff list</h4></dt>
 	<dd><a href="mailto:cs318-staff@cs.jhu.edu">cs318-staff@cs.jhu.edu</a></dd>
 </dl>
 
@@ -42,9 +42,9 @@ Prerequisites
 
 [![OSTEP]({{ "/assets/image/ostep.jpg" | relative_url }}){:width="120px"}](http://www.ostep.org/)
 
-<h4>Operating Systems: Three Easy Pieces</h4> by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau, <b class="text-success">available <a href="http://www.ostep.org">online</a> for free!</b>
+<h4>Operating Systems: Three Easy Pieces</h4> by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau, <b class="text-info">available <a href="http://www.ostep.org">online</a> for free!</b>
 
-**Other textbooks recommended for this course (but not required):**
+**Other recommended textbooks:**
 * [*Operating Systems: Principles and Practice, 2nd Edition (2014)*](http://recursivebooks.com), by Anderson and Dahlin, Recursive Books, ISBN 978-0985673529
 * [*Modern Operating Systems, 4th Edition (2014)*](https://www.amazon.com/Modern-Operating-Systems-Andrew-Tanenbaum/dp/013359162X), by Tanenbaum and Bos, Pearson, ISBN 978-0133591620 
 * [*Operating System Concepts, 8th Edition (2008)*](https://www.amazon.com/Operating-System-Concepts-Abraham-Silberschatz/dp/0470128720), by Silberschatz, Galvin and Gagne, Wiley, ISBN 978-0470128725.
@@ -67,8 +67,8 @@ Questions on examinations will be based on material covered in class, assigned r
 
 Your final grade for the course will be based on the following weights:
 * **Projects:** 50%
-* **Midterm:** 20%
-* **Final exam:** 30%
+* **Midterm:** 15%
+* **Final exam:** 35%
 
 For the programming assignments, there are no partial credits. You must turn in working code.
 
@@ -88,5 +88,8 @@ Cheating
   university policies. Failure to do so will result in serious consequences outlined in the policy.
   Simply stated, do no cheat. The consequences are very high for the time/effort saved.
 {: .policy .dl-horizontal}
+
+
+## Acknowledgments
 
 

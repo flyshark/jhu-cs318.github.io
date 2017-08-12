@@ -33,6 +33,8 @@ navigation:
       - title: Guide
         url: #
       - separator: true
+      - title: Lab 0 
+        url: #
       - title: Lab 1 
         url: #
       - title: Lab 2 
