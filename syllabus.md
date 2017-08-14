@@ -9,7 +9,7 @@ layout: default
     <tr class="info">
       <th>Week</th>
       <th>Date</th>
-      <th>Topic</th>
+      <th>Lecture</th>
       <th>Readings</th>
       <th>Assignments</th>
     </tr>
