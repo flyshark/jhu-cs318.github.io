@@ -35,7 +35,7 @@ system's default one, we will add a `i386-elf-` prefix to the build target, *e.g
 
 <div class="panel panel-info">
 <div class="panel-heading">
-<b>Note</b>
+<strong>Note</strong>
 </div>
 <div class="panel-body">
 <b>We've provided a script (<code class="highlighter-rouge">pintos/src/misc/toolchain-build.sh</code>) 
