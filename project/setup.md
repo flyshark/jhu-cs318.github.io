@@ -32,7 +32,15 @@ to build the toolchain from source. To distinguish the new toolchain from your
 system's default one, we will add a `i386-elf-` prefix to the build target, *e.g.*,
 `i386-elf-gcc`, `i386-elf-as`.
 
-**We've provided a script (`pintos/src/misc/build_toolchain.sh`) that automates the following.**
+<div class="panel panel-info">
+<div class="panel-heading">
+<b>Note</b>
+</div>
+<div class="panel-body">
+<b>We've provided a script (<code class="highlighter-rouge">pintos/src/misc/toolchain-build.sh</code>) 
+that automates the building of the toolchain.</b>
+</div>
+</div>
 
 * Directory and environment variables:
 
@@ -53,7 +61,6 @@ system's default one, we will add a `i386-elf-` prefix to the build target, *e.g
   $ export PATH=$PREFIX/bin:$PATH
   $ export LD_LIBRARY_PATH=$PREFIX/lib:$LD_LIBRARY_PATH
   ```
-
 * GNU binutils:
   - **Download**: 
   ```bash
@@ -102,10 +109,29 @@ system's default one, we will add a `i386-elf-` prefix to the build target, *e.g
   $ make install
   ```
 
+<div class="panel panel-info">
+<div class="panel-heading">
+<b>Note</b>
+</div>
+<div class="panel-body">
+After building and installing the toolchain, you need to make sure they are in 
+the PATH. Put <code class="highlighter-rogue">export PATH=/path/to/bin:$PATH</code> and 
+<code class="highlighter-rogue">export LD_LIBRARY_PATH=/path/to/lib:$LD_LIBRARY_PATH</code>
+to the end of your terminal config file (e.g., <code class="highlighter-rogue">.bashrc</code>)
+so that they are set automatically when you login. Remember to replace 
+<code class="highlighter-rogue">/path/to/{bin,lib}</code> with the actual path, 
+e.g., <code class="highlighter-rogue">~/318/toolchain/dist/bin</code>.
+</div>
+</div>
+
 ### x86 Emulator
 
 * **QEMU**:
-  - QEMU is modern and fast. Download and install from [this link](https://www.qemu.org/download/).
+  - QEMU is modern and fast. You can either install it from the package repository or
+  build it from [source](https://www.qemu.org/download/).
+    ```bash
+    sudo apt-get install qemu libvirt-bin
+    ```
 * **Bochs**:
   - Bochs is slower than QEMU but provides full emulation (i.e., higher accuracy).
     There are some bugs in Bochs that should be fixed when used with Pintos. Thus,
