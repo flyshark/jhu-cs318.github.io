@@ -5,7 +5,7 @@ layout: default
 OS programming requires looking up documentations of various sorts, e.g., ISA, hardware interfaces, 
 compilers, architecture. Often times, the lengthy manual is the only reference that is available. 
 Pintos is a small and simple OS. But in doing the projects, you will run into many situations where 
-you need to look up some documentation. Thus this course is one of the few courses where you learn
+you need to look up some documentation. This course will be one of the few courses where you learn
 how to effectively read documentations, and hopefully also how to write better documentations later.
 
 For the listed references, you don't need to go through them from beginning to end (especially these
@@ -15,7 +15,7 @@ time to time.
 #### Pintos
 {: .sec-header}
 
-* Getting Started
+* [Getting Started](project/pintos_1.html)
 
 
 #### x86 Emulator

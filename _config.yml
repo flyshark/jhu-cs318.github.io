@@ -28,8 +28,8 @@ navigation:
   - title: Projects
     url: /projects.html
     dropdown:
-      - title: Grading and Policies
-        url: #
+      - title: Setup
+        url: /project/setup.html
       - title: Guide
         url: #
       - separator: true
