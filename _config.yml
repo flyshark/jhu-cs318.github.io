@@ -34,13 +34,13 @@ navigation:
         url: #
       - separator: true
       - title: Lab 0 
-        url: #
+        url: /project/pintos.html
       - title: Lab 1 
-        url: #
+        url: /project/pintos_2.html
       - title: Lab 2 
-        url: #
+        url: /project/pintos_3.html
       - title: Lab 3 
-        url: #
+        url: /project/pintos_4.html
   - title: References
     url: /references.html
   - title: Piazza
