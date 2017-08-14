@@ -13,7 +13,7 @@ The CS department's [lab machines](https://support.cs.jhu.edu/wiki/Category:Linu
 already have these tools available. But you may want to work on the projects on
 your own machines. This page contains instructions to help you setup the development
 environment. They are intended for Unix and Mac OS machines. If you
-are running Windows, we recommend you run a virtual machine with Linux or you will 
+are running Windows, we recommend you to run a virtual machine with Linux or you will 
 have to setup [Cygwin](http://www.cygwin.com) first. This guide, and the course
 in general, assumes you are familiar with Unix commands.
 
@@ -103,3 +103,18 @@ system's default one, we will add a `i386-elf-` prefix to the build target, *e.g
   ```
 
 ### x86 Emulator
+
+* **QEMU**:
+  - QEMU is modern and fast. Download and install from [this link](https://www.qemu.org/download/).
+* **Bochs**:
+  - Bochs is slower than QEMU but provides full emulation (i.e., higher accuracy).
+    There are some bugs in Bochs that should be fixed when used with Pintos. Thus,
+    we need to install Bochs from source, and apply patches. We will build two
+    versions of Bochs: one, simply named `bochs`, with the GDB stub enabled, and the
+    other, named `bochs-dbg`, with the built-in debugger enabled.
+  - [Download Link](https://sourceforge.net/projects/bochs/files/bochs/2.6.2/bochs-2.6.2.tar.gz/download)
+  - Build script: `pintos/src/misc/bochs-2.6.2-build.sh`
+
+### Others
+* Required: [Perl](http://www.perl.org). Version 5.8.0 or later.
+* Recommended: [X](https://www.x.org/wiki), [ctags](http://ctags.sourceforge.net/), [cscope](http://cscope.sourceforge.net/)
