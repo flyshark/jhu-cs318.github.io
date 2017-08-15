@@ -224,7 +224,7 @@ One important feature is included:
 Unix-like semantics for <CODE>filesys_remove()</CODE> are implemented.
 That is, if a file is open when it is removed, its blocks
 are not deallocated and it may still be accessed by any
-threads that have it open, until the last one closes it.  See  <A HREF="pintos_3.html#Removing an Open File">Removing an Open File</A>, for more information.
+threads that have it open, until the last one closes it.  See  <A HREF="project2.html#Removing_an_Open_File">Removing an Open File</A>, for more information.
 </UL>
 <P>
 
@@ -468,90 +468,6 @@ option.
 </P>
 <P>
 
-<A NAME="Accessing User Memory"></A>
-<HR SIZE="6">
-<A NAME="SEC39"></A>
-<H3> Accessing User Memory </H3>
-<!--docid::SEC39::-->
-<P>
-
-As part of a system
-call, the kernel must often access memory through pointers provided by a user
-program.  The kernel must be very careful about doing so, because
-the user can pass a null pointer, a pointer to
-unmapped virtual memory, or a pointer to kernel virtual address space
-(above <CODE>PHYS_BASE</CODE>).  All of these types of invalid pointers must
-be rejected without harm to the kernel or other running processes, by
-terminating the offending process and freeing its resources.
-</P>
-<P>
-
-There are at least two reasonable ways to do this correctly.  The
-first method is to verify
-the validity of a user-provided pointer, then dereference it.  If you
-choose this route, you'll want to look at the functions in
-<Q><TT>userprog/pagedir.c</TT></Q> and in <Q><TT>threads/vaddr.h</TT></Q>.  This is the
-simplest way to handle user memory access.
-</P>
-<P>
-
-The second method is to check only that a user
-pointer points below <CODE>PHYS_BASE</CODE>, then dereference it.
-An invalid user pointer will cause a &quot;page fault&quot; that you can
-handle by modifying the code for <CODE>page_fault()</CODE> in
-<Q><TT>userprog/exception.c</TT></Q>.  This technique is normally faster
-because it takes advantage of the processor's MMU, so it tends to be
-used in real kernels (including Linux).
-</P>
-<P>
-
-In either case, you need to make sure not to &quot;leak&quot; resources.  For
-example, suppose that your system call has acquired a lock or
-allocated memory with <CODE>malloc()</CODE>.  If you encounter an invalid user pointer
-afterward, you must still be sure to release the lock or free the page
-of memory.  If you choose to verify user pointers before dereferencing
-them, this should be straightforward.  It's more difficult to handle
-if an invalid pointer causes a page fault,
-because there's no way to return an error code from a memory access.
-Therefore, for those who want to try the latter technique, we'll
-provide a little bit of helpful code:
-</P>
-<P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>/* Reads a byte at user virtual address UADDR.
-   UADDR must be below PHYS_BASE.
-   Returns the byte value if successful, -1 if a segfault
-   occurred. */
-static int
-get_user (const uint8_t *uaddr)
-{
-  int result;
-  asm (&quot;movl $1f, %0; movzbl %1, %0; 1:&quot;
-       : &quot;=&amp;a&quot; (result) : &quot;m&quot; (*uaddr));
-  return result;
-}
- 
-/* Writes BYTE to user address UDST.
-   UDST must be below PHYS_BASE.
-   Returns true if successful, false if a segfault occurred. */
-static bool
-put_user (uint8_t *udst, uint8_t byte)
-{
-  int error_code;
-  asm (&quot;movl $1f, %0; movb %b2, %1; 1:&quot;
-       : &quot;=&amp;a&quot; (error_code), &quot;=m&quot; (*udst) : &quot;q&quot; (byte));
-  return error_code != -1;
-}
-</pre></td></tr></table><P>
-
-Each of these functions assumes that the user address has already been
-verified to be below <CODE>PHYS_BASE</CODE>.  They also assume that you've
-modified <CODE>page_fault()</CODE> so that a page fault in the kernel merely
-sets <CODE>eax</CODE> to <TT>0xffffffff</TT> and copies its former value
-into <CODE>eip</CODE>.
-</P>
-<P>
-
 <A NAME="Project 2 Suggested Order of Implementation"></A>
 <HR SIZE="6">
 <A NAME="SEC40"></A>
@@ -566,7 +482,7 @@ parallel:
 
 <UL>
 <LI>
-Argument passing (see section <A HREF="pintos_3.html#SEC44">3.3.3 Argument Passing</A>).  Every user program will
+Argument passing (see section <A HREF="project2.html#SEC44">Argument Passing</A>).  Every user program will
 page fault immediately until argument passing is implemented.
 <P>
 
@@ -588,14 +504,14 @@ will probably fail.
 
 </P>
 <LI>
-User memory access (see section <A HREF="pintos_3.html#SEC39">3.1.5 Accessing User Memory</A>).  All system calls
+User memory access (see section <A HREF="project2.html#SEC39">Accessing User Memory</A>).  All system calls
 need to read user memory.  Few system calls need to write to user
 memory.
 <P>
 
 </P>
 <LI>
-System call infrastructure (see section <A HREF="pintos_3.html#SEC45">3.3.4 System Calls</A>).  Implement enough
+System call infrastructure (see section <A HREF="project2.html#SEC45">System Calls</A>).  Implement enough
 code to read the system call number from the user stack and dispatch to
 a handler based on it.
 <P>
@@ -673,6 +589,16 @@ when a process fails to load.
 </P>
 <P>
 
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 2.1</strong>
+</div>
+<div class="panel-body">
+Print exit message formatted as <CODE>"%s: exit(%d)\n"</CODE> with process name and
+exit status when process is terminated.
+</div>
+</div>
+
 Aside from this, don't print any other
 messages that Pintos as provided doesn't already print.  You may find
 extra messages useful during debugging, but they will confuse the
@@ -697,6 +623,15 @@ on.  That is, <CODE>process_execute(&quot;grep foo bar&quot;)</CODE> should run
 </P>
 <P>
 
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 2.2</strong>
+</div>
+<div class="panel-body">
+Add argument passing support for <CODE>process_execute()</CODE>.
+</div>
+</div>
+
 Within a command line, multiple spaces are equivalent to a single
 space, so that <CODE>process_execute(&quot;grep  foo   bar&quot;)</CODE>
 is equivalent to our original example.  You can impose a reasonable
@@ -715,31 +650,136 @@ at the prompt).
 </P>
 <P>
 
-See section <A HREF="pintos_3.html#SEC51">3.5.1 Program Startup Details</A>, for information on exactly how you
+See section <A HREF="project2.html#SEC51">Program Startup Details</A>, for information on exactly how you
 need to set up the stack.
+</P>
+<P>
+
+<A NAME="Accessing User Memory"></A>
+<HR SIZE="6">
+<A NAME="SEC39"></A>
+<H3> 3. Accessing User Memory </H3>
+<!--docid::SEC39::-->
+<P>
+
+As part of a system
+call, the kernel must often access memory through pointers provided by a user
+program.  The kernel must be very careful about doing so, because
+the user can pass a null pointer, a pointer to
+unmapped virtual memory, or a pointer to kernel virtual address space
+(above <CODE>PHYS_BASE</CODE>).  All of these types of invalid pointers must
+be rejected without harm to the kernel or other running processes, by
+terminating the offending process and freeing its resources.
+</P>
+<P>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 2.3</strong>
+</div>
+<div class="panel-body">
+Support reading from and writing to user memory for system calls.
+</div>
+</div>
+
+There are at least two reasonable ways to do this correctly.  The
+first method is to verify
+the validity of a user-provided pointer, then dereference it.  If you
+choose this route, you'll want to look at the functions in
+<Q><TT>userprog/pagedir.c</TT></Q> and in <Q><TT>threads/vaddr.h</TT></Q>.  This is the
+simplest way to handle user memory access.
+</P>
+<P>
+
+The second method is to check only that a user
+pointer points below <CODE>PHYS_BASE</CODE>, then dereference it.
+An invalid user pointer will cause a &quot;page fault&quot; that you can
+handle by modifying the code for <CODE>page_fault()</CODE> in
+<Q><TT>userprog/exception.c</TT></Q>.  This technique is normally faster
+because it takes advantage of the processor's MMU, so it tends to be
+used in real kernels (including Linux).
+</P>
+<P>
+
+In either case, you need to make sure not to &quot;leak&quot; resources.  For
+example, suppose that your system call has acquired a lock or
+allocated memory with <CODE>malloc()</CODE>.  If you encounter an invalid user pointer
+afterward, you must still be sure to release the lock or free the page
+of memory.  If you choose to verify user pointers before dereferencing
+them, this should be straightforward.  It's more difficult to handle
+if an invalid pointer causes a page fault,
+because there's no way to return an error code from a memory access.
+Therefore, for those who want to try the latter technique, we'll
+provide a little bit of helpful code:
+</P>
+<P>
+
+<TABLE><tr><td>&nbsp;</td><td class=example><pre>/* Reads a byte at user virtual address UADDR.
+   UADDR must be below PHYS_BASE.
+   Returns the byte value if successful, -1 if a segfault
+   occurred. */
+static int
+get_user (const uint8_t *uaddr)
+{
+  int result;
+  asm (&quot;movl $1f, %0; movzbl %1, %0; 1:&quot;
+       : &quot;=&amp;a&quot; (result) : &quot;m&quot; (*uaddr));
+  return result;
+}
+ 
+/* Writes BYTE to user address UDST.
+   UDST must be below PHYS_BASE.
+   Returns true if successful, false if a segfault occurred. */
+static bool
+put_user (uint8_t *udst, uint8_t byte)
+{
+  int error_code;
+  asm (&quot;movl $1f, %0; movb %b2, %1; 1:&quot;
+       : &quot;=&amp;a&quot; (error_code), &quot;=m&quot; (*udst) : &quot;q&quot; (byte));
+  return error_code != -1;
+}
+</pre></td></tr></table><P>
+
+Each of these functions assumes that the user address has already been
+verified to be below <CODE>PHYS_BASE</CODE>.  They also assume that you've
+modified <CODE>page_fault()</CODE> so that a page fault in the kernel merely
+sets <CODE>eax</CODE> to <TT>0xffffffff</TT> and copies its former value
+into <CODE>eip</CODE>.
 </P>
 <P>
 
 <A NAME="System Calls"></A>
 <HR SIZE="6">
 <A NAME="SEC45"></A>
-<H3> 3. System Calls </H3>
+<H3> 4. System Calls </H3>
 <!--docid::SEC45::-->
-<P>
 
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 2.4.1</strong>
+</div>
+<div class="panel-body">
 Implement the system call handler in <Q><TT>userprog/syscall.c</TT></Q>.  The
 skeleton implementation we provide &quot;handles&quot; system calls by
 terminating the process.  It will need to retrieve the system call
 number, then any system call arguments, and carry out appropriate actions.
-</P>
+</div>
+</div>
 <P>
+</P>
 
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 2.4.2</strong>
+</div>
+<div class="panel-body">
 Implement the following system calls.  The prototypes listed are those
 seen by a user program that includes <Q><TT>lib/user/syscall.h</TT></Q>.  (This
 header, and all others in <Q><TT>lib/user</TT></Q>, are for use by user
 programs only.)  System call numbers for each system call are defined in
 <Q><TT>lib/syscall-nr.h</TT></Q>:
-</P>
+</div>
+</div>
 <P>
 
 <A NAME="IDX4"></A>
@@ -865,7 +905,7 @@ separate operation which would require a <CODE>open</CODE> system call.
 <DD>Deletes the file called <VAR>file</VAR>.  Returns true if successful, false
 otherwise.
 A file may be removed regardless of whether it is open or closed, and
-removing an open file does not close it.  See  <A HREF="pintos_3.html#Removing an Open File">Removing an Open File</A>, for details.
+removing an open file does not close it.  See  <A HREF="project2.html#Removing an Open File">Removing an Open File</A>, for details.
 </DL>
 <P>
 
@@ -1001,7 +1041,7 @@ pointer, a pointer into kernel memory, or a block
 partially in one of those regions?  You should handle these cases by
 terminating the user process.  We recommend
 writing and testing this code before implementing any other system
-call functionality.  See section <A HREF="pintos_3.html#SEC39">3.1.5 Accessing User Memory</A>, for more information.
+call functionality.  See section <A HREF="project2.html#SEC39">3.1.5 Accessing User Memory</A>, for more information.
 </P>
 <P>
 
@@ -1040,23 +1080,28 @@ value), returning an undefined value, or terminating the process.
 </P>
 <P>
 
-See section <A HREF="pintos_3.html#SEC52">3.5.2 System Call Details</A>, for details on how system calls work.
+See section <A HREF="project2.html#SEC52">System Call Details</A>, for details on how system calls work.
 </P>
 <P>
 
 <A NAME="Denying Writes to Executables"></A>
 <HR SIZE="6">
 <A NAME="SEC46"></A>
-<H3> 4. Denying Writes to Executables </H3>
+<H3> 5. Denying Writes to Executables </H3>
 <!--docid::SEC46::-->
-<P>
 
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 2.5</strong>
+</div>
+<div class="panel-body">
 Add code to deny writes to files in use as executables.  Many OSes do
 this because of the unpredictable results if a process tried to run code
 that was in the midst of being changed on disk.  This is especially
 important once virtual memory is implemented in project 3, but it can't
 hurt even now.
-</P>
+</div>
+</div>
 <P>
 
 You can use <CODE>file_deny_write()</CODE> to prevent writes to an open file.
@@ -1166,7 +1211,7 @@ Every reasonable program tries to make at least one system call
 <CODE>printf()</CODE> invokes the <CODE>write</CODE> system call.  The default system
 call handler just prints <Q><SAMP>system call!</SAMP></Q> and terminates the program.
 Until then, you can use <CODE>hex_dump()</CODE> to convince yourself that
-argument passing is implemented correctly (see section <A HREF="pintos_3.html#SEC51">3.5.1 Program Startup Details</A>).
+argument passing is implemented correctly (see section <A HREF="project.html#SEC51">Program Startup Details</A>).
 </P>
 <P>
 
@@ -1306,7 +1351,7 @@ It is better not to set an arbitrary limit.  You may impose a limit of
 
 </P>
 <DT>What happens when an open file is removed?
-<DD><A NAME="Removing an Open File"></A>
+<DD><A NAME="Removing_an_Open_File"></A>
 <P>
 
 You should implement the standard Unix semantics for files.  That is, when
@@ -1448,7 +1493,7 @@ _start (int argc, char *argv[])
 
 The kernel must put the arguments for the initial function on the stack
 before it allows the user program to begin executing.  The arguments are
-passed in the same way as the normal calling convention (see section <A HREF="pintos_3.html#SEC50">3.5 80<VAR>x</VAR>86 Calling Convention</A>).
+passed in the same way as the normal calling convention (see section <A HREF="project2.html#SEC50">80<VAR>x</VAR>86 Calling Convention</A>).
 </P>
 <P>
 
@@ -1568,7 +1613,7 @@ is handled in the same way as other software exceptions.  In Pintos,
 user programs invoke <Q><SAMP>int $0x30</SAMP></Q> to make a system call.  The
 system call number and any additional arguments are expected to be
 pushed on the stack in the normal fashion before invoking the
-interrupt (see section <A HREF="pintos_3.html#SEC50">3.5 80<VAR>x</VAR>86 Calling Convention</A>).
+interrupt (see section <A HREF="project2.html#SEC50">80<VAR>x</VAR>86 Calling Convention</A>).
 </P>
 <P>
 
