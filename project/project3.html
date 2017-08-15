@@ -32,14 +32,14 @@ you did in the previous assignment (see section <A HREF="pintos_3.html#SEC35">3.
 <A NAME="Project 3 Background"></A>
 <HR SIZE="6">
 <A NAME="SEC54"></A>
-<H2> 4.1 Background </H2>
+<H2> Background </H2>
 <!--docid::SEC54::-->
 <P>
 
 <A NAME="Project 3 Source Files"></A>
 <HR SIZE="6">
 <A NAME="SEC55"></A>
-<H3> 4.1.1 Source Files </H3>
+<H3> Source Files </H3>
 <!--docid::SEC55::-->
 <P>
 
@@ -56,7 +56,7 @@ You will probably be encountering just a few files for the first time:
 <P>
 
 </P>
-<DL COMPACT>
+<DL COMPACT class="source-listing">
 <DT><Q><TT>devices/block.h</TT></Q>
 <DD><DT><Q><TT>devices/block.c</TT></Q>
 <DD>Provides sector-based read and write access to block device.  You will
@@ -67,7 +67,7 @@ use this interface to access the swap partition as a block device.
 <A NAME="Memory Terminology"></A>
 <HR SIZE="6">
 <A NAME="SEC56"></A>
-<H3> 4.1.2 Memory Terminology </H3>
+<H3> Memory Terminology </H3>
 <!--docid::SEC56::-->
 <P>
 
@@ -81,7 +81,7 @@ memory and storage.  Some of these terms should be familiar from project
 <A NAME="Pages"></A>
 <HR SIZE="6">
 <A NAME="SEC57"></A>
-<H4> 4.1.2.1 Pages </H4>
+<H4> Pages </H4>
 <!--docid::SEC57::-->
 <P>
 
@@ -118,7 +118,7 @@ addresses.  See section <A HREF="pintos_6.html#SEC114">A.6 Virtual Addresses</A>
 <A NAME="Frames"></A>
 <HR SIZE="6">
 <A NAME="SEC58"></A>
-<H4> 4.1.2.2 Frames </H4>
+<H4> Frames </H4>
 <!--docid::SEC58::-->
 <P>
 
@@ -154,7 +154,7 @@ kernel virtual addresses.  See section <A HREF="pintos_6.html#SEC114">A.6 Virtua
 <A NAME="Page Tables"></A>
 <HR SIZE="6">
 <A NAME="SEC59"></A>
-<H4> 4.1.2.3 Page Tables </H4>
+<H4> Page Tables </H4>
 <!--docid::SEC59::-->
 <P>
 
@@ -188,7 +188,7 @@ address, on the right.
 <A NAME="Swap Slots"></A>
 <HR SIZE="6">
 <A NAME="SEC60"></A>
-<H4> 4.1.2.4 Swap Slots </H4>
+<H4> Swap Slots </H4>
 <!--docid::SEC60::-->
 <P>
 
@@ -202,7 +202,7 @@ page-aligned because there is no downside in doing so.
 <A NAME="Resource Management Overview"></A>
 <HR SIZE="6">
 <A NAME="SEC61"></A>
-<H3> 4.1.3 Resource Management Overview </H3>
+<H3> Resource Management Overview </H3>
 <!--docid::SEC61::-->
 <P>
 
@@ -300,7 +300,7 @@ Thus, we do not recommend implementing any advanced data structure
 <A NAME="Managing the Supplemental Page Table"></A>
 <HR SIZE="6">
 <A NAME="SEC62"></A>
-<H3> 4.1.4 Managing the Supplemental Page Table </H3>
+<H3> Managing the Supplemental Page Table </H3>
 <!--docid::SEC62::-->
 <P>
 
@@ -391,7 +391,7 @@ physical page.  You can use the functions in <Q><TT>userprog/pagedir.c</TT></Q>.
 <A NAME="Managing the Frame Table"></A>
 <HR SIZE="6">
 <A NAME="SEC63"></A>
-<H3> 4.1.5 Managing the Frame Table </H3>
+<H3> Managing the Frame Table </H3>
 <!--docid::SEC63::-->
 <P>
 
@@ -458,7 +458,7 @@ The evicted frame may then be used to store a different page.
 <A NAME="Accessed and Dirty Bits"></A>
 <HR SIZE="6">
 <A NAME="SEC64"></A>
-<H4> 4.1.5.1 Accessed and Dirty Bits </H4>
+<H4> Accessed and Dirty Bits </H4>
 <!--docid::SEC64::-->
 <P>
 
@@ -500,7 +500,7 @@ to work with accessed and dirty bits.
 <A NAME="Managing the Swap Table"></A>
 <HR SIZE="6">
 <A NAME="SEC65"></A>
-<H3> 4.1.6 Managing the Swap Table </H3>
+<H3> Managing the Swap Table </H3>
 <!--docid::SEC65::-->
 <P>
 
@@ -538,7 +538,7 @@ Free a swap slot when its contents are read back into a frame.
 <A NAME="Managing Memory Mapped Files Back"></A>
 <HR SIZE="6">
 <A NAME="SEC66"></A>
-<H3> 4.1.7 Managing Memory Mapped Files </H3>
+<H3> Managing Memory Mapped Files </H3>
 <!--docid::SEC66::-->
 <P>
 
@@ -593,7 +593,7 @@ segments within the process.
 <A NAME="Project 3 Suggested Order of Implementation"></A>
 <HR SIZE="6">
 <A NAME="SEC67"></A>
-<H2> 4.2 Suggested Order of Implementation </H2>
+<H2> Suggested Order of Implementation </H2>
 <!--docid::SEC67::-->
 <P>
 
@@ -648,7 +648,7 @@ eviction strategy such as the clock algorithm.
 <A NAME="Project 3 Requirements"></A>
 <HR SIZE="6">
 <A NAME="SEC68"></A>
-<H2> 4.3 Requirements </H2>
+<H2> Requirements </H2>
 <!--docid::SEC68::-->
 <P>
 
@@ -664,7 +664,7 @@ partition, how to implement paging, etc.
 <A NAME="Project 3 Design Document"></A>
 <HR SIZE="6">
 <A NAME="SEC69"></A>
-<H3> 4.3.1 Design Document </H3>
+<H3> 0. Design Document </H3>
 <!--docid::SEC69::-->
 <P>
 
@@ -680,23 +680,34 @@ that goes along with a fictitious project.
 <A NAME="Paging"></A>
 <HR SIZE="6">
 <A NAME="SEC70"></A>
-<H3> 4.3.2 Paging </H3>
+<H3> 1. Paging </H3>
 <!--docid::SEC70::-->
-<P>
-
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 3.1</strong>
+</div>
+<div class="panel-body">
 Implement paging for segments loaded from executables.  All of these
 pages should be loaded lazily, that is, only as the kernel intercepts
 page faults for them.  Upon eviction, pages modified since load (e.g.
 as indicated by the &quot;dirty bit&quot;) should be written to swap.
 Unmodified pages, including read-only pages, should never be written to
 swap because they can always be read back from the executable.
-</P>
+</div>
+</div>
 <P>
+</P>
 
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 3.1</strong>
+</div>
+<div class="panel-body">
 Implement a global page replacement algorithm that approximates LRU.
 Your algorithm should perform at least as well as the simple variant
 of the &quot;second chance&quot; or &quot;clock&quot; algorithm.
-</P>
+</div>
+</div>
 <P>
 
 Your design should allow for parallelism.  If one page fault requires
@@ -741,15 +752,20 @@ be read from the underlying file and the remainder zeroed.
 <A NAME="Stack Growth"></A>
 <HR SIZE="6">
 <A NAME="SEC71"></A>
-<H3> 4.3.3 Stack Growth </H3>
+<H3> 2. Stack Growth </H3>
 <!--docid::SEC71::-->
-<P>
 
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 2.1</strong>
+</div>
+<div class="panel-body">
 Implement stack growth.  In project 2, the stack was a single page at
 the top of the user virtual address space, and programs were limited to
 that much stack.  Now, if the stack grows past its current size,
 allocate additional pages as necessary.
-</P>
+</div>
+</div>
 <P>
 
 Allocate additional pages only if they &quot;appear&quot; to be stack accesses.
@@ -809,18 +825,25 @@ page should be written to swap.
 <A NAME="Memory Mapped Files"></A>
 <HR SIZE="6">
 <A NAME="SEC72"></A>
-<H3> 4.3.4 Memory Mapped Files </H3>
+<H3> 3. Memory Mapped Files </H3>
 <!--docid::SEC72::-->
-<P>
-
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 3.3</strong>
+</div>
+<div class="panel-body">
 Implement memory mapped files, including the following system calls.
-</P>
-<P>
+<ul>
+  <li>mapid_t <b>mmap</b> (int <var>fd</var>, void *<var>addr</var>)</li>
+  <li>void <B>munmap</B> (mapid_t <VAR>mapping</VAR>)</li>
+</ul>
+</div>
+</div>
 
 <A NAME="IDX17"></A>
 </P>
 <DL>
-<DT><U>System Call:</U> mapid_t <B>mmap</B> (int <VAR>fd</VAR>, void *<VAR>addr</VAR>)
+<DT><U>System Call:</U> mapid_t <b>mmap</b> (int <var>fd</var>, void *<var>addr</var>)
 <DD>Maps the file open as <VAR>fd</VAR> into the process's virtual address
 space.  The entire file is mapped into consecutive virtual pages
 starting at <VAR>addr</VAR>.
@@ -896,7 +919,7 @@ private (i.e. copy-on-write).
 
 <HR SIZE="6">
 <A NAME="SEC73"></A>
-<H3> 4.3.5 Accessing User Memory </H3>
+<H3> 4. Accessing User Memory </H3>
 <!--docid::SEC73::-->
 You will need to adapt your code to access user memory (see section <A HREF="pintos_3.html#SEC39">3.1.5 Accessing User Memory</A>) while handling a system call.  Just as user processes may
 access pages whose content is currently in a file or in swap space, so
@@ -905,8 +928,21 @@ calls.  Moreover, unless your kernel takes measures to prevent this,
 a page may be evicted from its frame even while it is being accessed
 by kernel code.  If kernel code accesses such non-resident user pages,
 a page fault will result.
-<P>
 
+<P>
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 3.4</strong>
+</div>
+<div class="panel-body">
+Adjust user memory access code in system call handling to deal with potential page
+faults.
+</div>
+</div>
+
+</P>
+
+<P>
 While accessing user memory, your kernel must either be prepared to handle
 such page faults, or it must prevent them from occurring.  The kernel 
 must prevent such page faults while it is holding resources it would 
@@ -933,7 +969,7 @@ it is not necessary.
 <A NAME="Project 3 FAQ"></A>
 <HR SIZE="6">
 <A NAME="SEC74"></A>
-<H2> 4.4 FAQ </H2>
+<H2> FAQ </H2>
 <!--docid::SEC74::-->
 <P>
 
