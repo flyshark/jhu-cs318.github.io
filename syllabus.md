@@ -20,7 +20,7 @@ layout: default
       <td>08/31 Thu</td>
       <td>Course Intro</td>
       <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/dialogue-threeeasy.pdf">Chapter 1</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf">Chapter 2</a></td>
-      <td>Lab 0 out</td>
+      <td></td>
     </tr>
     <tr>
       <td rowspan="2"><b>Week 1</b></td>
@@ -40,7 +40,7 @@ layout: default
       <td>09/12 Tue</td>
       <td>Threads</td>
       <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf">Chapter 26</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-api.pdf">Chapter 27</a></td>
-      <td>Lab 1 out</td>
+      <td></td>
     </tr>
     <tr>
       <td>09/14 Thu</td>
@@ -66,7 +66,7 @@ layout: default
       <td>09/26 Tue</td>
       <td>Scheduling</td>
       <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf">Chapter 7</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf">Chapter 8</a></td>
-      <td><span class="text-danger">Lab 1 due</span><br>Lab 2 out</td>
+      <td><span class="text-danger">Lab 1 due</span><br></td>
     </tr>
     <tr>
       <td>09/28 Thu</td>
@@ -105,7 +105,7 @@ layout: default
       <td>10/17 Tue</td>
       <td>Dynamic Memory Allocation</td>
       <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-api.pdf">Chapter 14</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf">Chapter 17</a></td>
-      <td><span class="text-danger">Lab 2 due</span><br>Lab 3 out</td>
+      <td><span class="text-danger">Lab 2 due</span><br></td>
     </tr>
     <tr>
       <td>10/19 Thu</td>
@@ -149,7 +149,7 @@ layout: default
       <td>11/09 Thu</td>
       <td>Protection</td>
       <td>Read the <a href="http://dl.acm.org/citation.cfm?id=775265.775268">paper</a> by Lampson</td>
-      <td><span class="text-danger">Lab 3 due</span><br>Lab 4 out</td>
+      <td><span class="text-danger">Lab 3 due</span></td>
     </tr>
     <tr>
       <td rowspan="2"><b>Week 11</b></td>
