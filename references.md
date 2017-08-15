@@ -15,20 +15,20 @@ in them from time to time.
 
 ### Pintos
 
-You should read everything below before attempting any of the projects:
+* You should read everything below before attempting any of the projects:
+  - [Getting Started](project/pintos_1.html)
+  - [Coding Standards](project/pintos_8.html)
+  - [Project Documentation](project/pintos_9.html)
 
-* [Getting Started](project/pintos_1.html)
-* [Coding Standards](project/pintos_8.html)
-* [Project Documentation](project/pintos_9.html)
+* You need not read the reference guide, but you may find the information in it valuable from time to time:
+  - [Reference Guide](project/pintos_6.html)
 
-You need not read the reference guide, but you may find the information in it valuable from time to time:
+* You'll want to read these once you start work on the projects. Their advice can save you a lot of time:
+  - [Debugging Tools](project/pintos_10.html)
+  - [Development Tools](project/pintos_11.html)
 
-* [Reference Guide](project/pintos_6.html)
-
-You'll want to read these once you start work on the projects. Their advice can save you a lot of time:
-
-* [Debugging Tools](project/pintos_10.html)
-* [Development Tools](project/pintos_11.html)
+* Bracketed notations in Pintos source code comments can be looked up in the [Bibliography](project/pintos_13.html).
+  The corresponding manual (e.g., ELF specification) will be fount in the link of the Bibliography.
 
 <hr>
 

@@ -106,7 +106,8 @@ refer to the [setup guide](setup.html) for instructions.
 * The original Pintos [paper](https://benpfaff.org/papers/pintos.pdf)
 * **The original Pintos reference** in [PDF](pintos.pdf), [HTML](pintos.html). *Note that 
   we've customized it a bit and our version is the official one for this class.*{: .text-info}
-* The reference [page](/references.html)
+* The reference [page](/references.html) contains instructions on how to read the Pintos
+  reference.
 
 <HR SIZE="6">
 ### Version Control

@@ -38,7 +38,7 @@ You might find it useful to go back and reread how to run the tests
 <A NAME="Project 2 Background"></A>
 <HR SIZE="6">
 <A NAME="SEC33"></A>
-<H2> 3.1 Background </H2>
+<H2> Background </H2>
 <!--docid::SEC33::-->
 <P>
 
@@ -73,7 +73,7 @@ code however you wish.
 <A NAME="Project 2 Source Files"></A>
 <HR SIZE="6">
 <A NAME="SEC34"></A>
-<H3> 3.1.1 Source Files </H3>
+<H3> Source Files </H3>
 <!--docid::SEC34::-->
 <P>
 
@@ -85,7 +85,7 @@ where the bulk of your work will be:
 <P>
 
 </P>
-<DL COMPACT>
+<DL COMPACT class="source-listing">
 <DT><Q><TT>process.c</TT></Q>
 <DD><DT><Q><TT>process.h</TT></Q>
 <DD>Loads ELF binaries and starts processes.
@@ -145,7 +145,7 @@ works.
 <A NAME="Using the File System"></A>
 <HR SIZE="6">
 <A NAME="SEC35"></A>
-<H3> 3.1.2 Using the File System </H3>
+<H3> Using the File System </H3>
 <!--docid::SEC35::-->
 <P>
 
@@ -308,7 +308,7 @@ You can delete a file from the Pintos file system using the <CODE>rm
 <A NAME="How User Programs Work"></A>
 <HR SIZE="6">
 <A NAME="SEC36"></A>
-<H3> 3.1.3 How User Programs Work </H3>
+<H3> How User Programs Work </H3>
 <!--docid::SEC36::-->
 <P>
 
@@ -352,7 +352,7 @@ which may happen occasionally while debugging.
 <A NAME="Virtual Memory Layout"></A>
 <HR SIZE="6">
 <A NAME="SEC37"></A>
-<H3> 3.1.4 Virtual Memory Layout </H3>
+<H3> Virtual Memory Layout </H3>
 <!--docid::SEC37::-->
 <P>
 
@@ -399,7 +399,7 @@ will cause a page fault.
 <A NAME="Typical Memory Layout"></A>
 <HR SIZE="6">
 <A NAME="SEC38"></A>
-<H4> 3.1.4.1 Typical Memory Layout </H4>
+<H4> Typical Memory Layout </H4>
 <!--docid::SEC38::-->
 <P>
 
@@ -471,7 +471,7 @@ option.
 <A NAME="Accessing User Memory"></A>
 <HR SIZE="6">
 <A NAME="SEC39"></A>
-<H3> 3.1.5 Accessing User Memory </H3>
+<H3> Accessing User Memory </H3>
 <!--docid::SEC39::-->
 <P>
 
@@ -555,7 +555,7 @@ into <CODE>eip</CODE>.
 <A NAME="Project 2 Suggested Order of Implementation"></A>
 <HR SIZE="6">
 <A NAME="SEC40"></A>
-<H2> 3.2 Suggested Order of Implementation </H2>
+<H2> Suggested Order of Implementation </H2>
 <!--docid::SEC40::-->
 <P>
 
@@ -635,14 +635,14 @@ to pass.
 <A NAME="Project 2 Requirements"></A>
 <HR SIZE="6">
 <A NAME="SEC41"></A>
-<H2> 3.3 Requirements </H2>
+<H2> Requirements </H2>
 <!--docid::SEC41::-->
 <P>
 
 <A NAME="Project 2 Design Document"></A>
 <HR SIZE="6">
 <A NAME="SEC42"></A>
-<H3> 3.3.1 Design Document </H3>
+<H3> 0. Design Document </H3>
 <!--docid::SEC42::-->
 <P>
 
@@ -657,7 +657,7 @@ that goes along with a fictitious project.
 <A NAME="Process Termination Messages"></A>
 <HR SIZE="6">
 <A NAME="SEC43"></A>
-<H3> 3.3.2 Process Termination Messages </H3>
+<H3> 1. Process Termination Messages </H3>
 <!--docid::SEC43::-->
 <P>
 
@@ -683,7 +683,7 @@ grading scripts and thus lower your score.
 <A NAME="Argument Passing"></A>
 <HR SIZE="6">
 <A NAME="SEC44"></A>
-<H3> 3.3.3 Argument Passing </H3>
+<H3> 2. Argument Passing </H3>
 <!--docid::SEC44::-->
 <P>
 
@@ -723,7 +723,7 @@ need to set up the stack.
 <A NAME="System Calls"></A>
 <HR SIZE="6">
 <A NAME="SEC45"></A>
-<H3> 3.3.4 System Calls </H3>
+<H3> 3. System Calls </H3>
 <!--docid::SEC45::-->
 <P>
 
@@ -1047,7 +1047,7 @@ See section <A HREF="pintos_3.html#SEC52">3.5.2 System Call Details</A>, for det
 <A NAME="Denying Writes to Executables"></A>
 <HR SIZE="6">
 <A NAME="SEC46"></A>
-<H3> 3.3.5 Denying Writes to Executables </H3>
+<H3> 4. Denying Writes to Executables </H3>
 <!--docid::SEC46::-->
 <P>
 
@@ -1070,7 +1070,7 @@ must keep it open as long as the process is still running.
 <A NAME="Project 2 FAQ"></A>
 <HR SIZE="6">
 <A NAME="SEC47"></A>
-<H2> 3.4 FAQ </H2>
+<H2> FAQ </H2>
 <!--docid::SEC47::-->
 <P>
 
@@ -1247,7 +1247,7 @@ same process, or you can use a more complex mapping.  It's up to you.
 <A NAME="Argument Passing FAQ"></A>
 <HR SIZE="6">
 <A NAME="SEC48"></A>
-<H3> 3.4.1 Argument Passing FAQ </H3>
+<H3> Argument Passing FAQ </H3>
 <!--docid::SEC48::-->
 <P>
 
@@ -1277,7 +1277,7 @@ simply via recompilation.
 <A NAME="System Calls FAQ"></A>
 <HR SIZE="6">
 <A NAME="SEC49"></A>
-<H3> 3.4.2 System Calls FAQ </H3>
+<H3> System Calls FAQ </H3>
 <!--docid::SEC49::-->
 <P>
 
@@ -1348,7 +1348,7 @@ communicated without race conditions.
 <A NAME="80x86 Calling Convention"></A>
 <HR SIZE="6">
 <A NAME="SEC50"></A>
-<H2> 3.5 80<VAR>x</VAR>86 Calling Convention </H2>
+<H2> 80<VAR>x</VAR>86 Calling Convention </H2>
 <!--docid::SEC50::-->
 <P>
 
@@ -1428,7 +1428,7 @@ stack pointer --&gt; 0xbffffe70 | return address |
 <A NAME="Program Startup Details"></A>
 <HR SIZE="6">
 <A NAME="SEC51"></A>
-<H3> 3.5.1 Program Startup Details </H3>
+<H3> Program Startup Details </H3>
 <!--docid::SEC51::-->
 <P>
 
@@ -1544,7 +1544,7 @@ bffffff0  6e 2f 6c 73 00 2d 6c 00-66 6f 6f 00 62 61 72 00 |n/ls.-l.foo.bar.|
 <A NAME="System Call Details"></A>
 <HR SIZE="6">
 <A NAME="SEC52"></A>
-<H3> 3.5.2 System Call Details </H3>
+<H3> System Call Details </H3>
 <!--docid::SEC52::-->
 <P>
 
