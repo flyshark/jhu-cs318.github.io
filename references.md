@@ -13,14 +13,26 @@ For the listed references, you don't need to go through them from beginning to e
 for these architecture manuals) unless it's recommended so. But you may find useful information 
 in them from time to time.
 
-#### Pintos
-{: .sec-header}
+### Pintos
+
+You should read everything below before attempting any of the projects:
 
 * [Getting Started](project/pintos_1.html)
+* [Coding Standards](project/pintos_8.html)
+* [Project Documentation](project/pintos_9.html)
 
+You need not read the reference guide, but you may find the information in it valuable from time to time:
 
-#### x86 Emulator
-{: .sec-header}
+* [Reference Guide](project/pintos_6.html)
+
+You'll want to read these once you start work on the projects. Their advice can save you a lot of time:
+
+* [Debugging Tools](project/pintos_10.html)
+* [Development Tools](project/pintos_11.html)
+
+<hr>
+
+### x86 Emulator
 
 * [QEMU](http://www.qemu.org): a popular, fast CPU emulator and virtualizer.
 	- [Documentation](http://wiki.qemu.org/Qemu-doc.html)

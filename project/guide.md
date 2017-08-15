@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: CS 318 Pintos Project Guide
 ---
 
@@ -29,40 +29,48 @@ We will start with a pre-project and then do four substantial projects:
   <thead>
     <tr class="info">
       <th>Project</th>
+      <th>Weight</th>
       <th>Due</th>
     </tr>
   </thead>
   <tbody>
   <tr>
     <td><a href="project0.html">Lab 0: Jump Start</a></td>
+    <td>2%</td>
     <td>09/07 11:59 pm</td>
   </tr>
   <tr>
     <td><a href="project1.html">Lab 1: Threads</a></td>
+    <td>8%</td>
     <td>09/26 11:59 pm</td>
   </tr>
   <tr>
     <td><a href="project2.html">Lab 2: User Programs</a></td>
+    <td>10%</td>
     <td>10/17 11:59 pm</td>
   </tr>
   <tr>
     <td><a href="project3.html">Lab 3: Virtual Memory</a></td>
+    <td>14%</td>
     <td>11/09 11:59 pm</td>
   </tr>
   <tr>
     <td><a href="project4.html">Lab 4: File Systems</a></td>
+    <td>16%</td>
     <td>12/07 11:59 pm</td>
   </tr>
   </tbody>
 </table>
 
 
+<HR SIZE="6">
 ### Groups
 Lab 0 is an individual project. From Lab 1 and onwards, you can work in groups of 
 1-3 people. We will overlap Lab 0 with the stage of forming groups. So start
 talking with your classmates around once the course begins! Note that, though,
 larger team size doesn't always yield better performance for the projects.
 
+<HR SIZE="6">
 ### Getting Started
 To get started, you can get a copy of the Pintos source code distribution.
 ```bash
@@ -89,13 +97,70 @@ Pintos development. We will be test your code on these machines. If you decide t
 work on the projects on your own machine (e.g., Ubuntu, Fedora, Mac OS), you can 
 refer to the [setup guide](setup.html) for instructions.
 
+<HR SIZE="6">
 ### Documentation
 
+* Pintos source code 
+  - [Brief overview of the source tree](listing_0.html)
+  - [Reference guide](pintos_6.html)
+* The original Pintos [paper](https://benpfaff.org/papers/pintos.pdf)
+* **The original Pintos reference** in [PDF](pintos.pdf), [HTML](pintos.html). *Note that 
+  we've customized it a bit and our version is the official one for this class.*{: .text-info}
+* The reference [page](/references.html)
 
-### Source Tree Overview
-
-Within the pintos source distribution that you just downloaded (extract it if
-necessary), you should see in <Q><TT>pintos/src</TT></Q>. Refer to the [brief overview](listing_0.html)
-of the source tree.
-
+<HR SIZE="6">
 ### Version Control
+
+We will be using Git for version control in the class. If you are new to Git, there
+are plenty of tutorials online that you can read, e.g., [this one](https://www.atlassian.com/git/tutorials).
+
+<HR SIZE="6">
+### Grading
+
+We will grade your assignments based on test results (**70% of your grade**)
+as well as design quality (**30% of your grade**). Note that the testing grades
+are fully automated. So please turn in working code or there is no credit. 
+The [grading policy page](grading.html) lists detailed information about how 
+grading is done.
+
+<HR SIZE="6">
+### Submission
+
+We will be using [GitHub classroom](https://education.github.com) to distribute 
+and collect assignments. You do not have to do anything special to submit your project. 
+We will use a snapshot of your GitHub repository as it exists at the deadline, and 
+grade that version. You can still make changes to your repository after the deadline.
+But we will be only using the snapshot of your code as of the deadline.
+
+<HR SIZE="6">
+### Cheating and Collaboration
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <strong>Warning!</strong>
+  </div>
+  <div class="panel-body">
+  This class has zero tolerance for cheating. We will run tools to check your submission 
+  against a comprehensive database of solutions including past and present submissions 
+  for potential cheating. The consequences are very high. Please
+  read the JHU CS department's <a href="https://www.cs.jhu.edu/academic-integrity-code">academic integrity code</a>.
+</div>
+</div>
+
+I urge you to resist any temptation to cheat, no matter how desperate the situation 
+may seem. If you are in circumstances that you feel compel you to cheat, come to me 
+first before you do so.
+
+The basic policies are:
+* Never share code or text on the project. *That also means do not make your solutions
+  public on GitHub*{: .text-danger}.
+* Never use someone else's code or text in your solutions.
+* Never consult project code or text found on the Internet.
+* You may read but not copy Linux or BSD source code. *But you must cite any code
+  that inspired your code*{: .text-danger}. Code inspired by cited reference will 
+  not constitute cheating. In the worst case, we deduct points if it undermines 
+  the assignment.
+
+On the other hand, we encourage collaboration in the following form:
+* Share ideas (but do not give code to others).
+* Explain your code to someone to see if they know why it does not work.
+* Help someone else debug if they've got stuck.
