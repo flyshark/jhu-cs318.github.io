@@ -27,6 +27,9 @@
               {%- assign class = 'dropdown' -%}
             {% endif %}
           {%- endif -%}
+          {%- unless item.url contains 'http://' or item.url contains 'https://' -%}
+          {%- assign item.url = item.url | relative_url -%}
+          {%- endunless -%}
         <li class="{{ class }}">
           {% if item.dropdown -%}
           <a href="{{ item.url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ item.title }} <span class="caret"></span></a>
