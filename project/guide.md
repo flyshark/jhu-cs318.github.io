@@ -147,10 +147,6 @@ But we will be only using the snapshot of your code as of the deadline.
 </div>
 </div>
 
-I urge you to resist any temptation to cheat, no matter how desperate the situation 
-may seem. If you are in circumstances that you feel compel you to cheat, come to me 
-first before you do so.
-
 The basic policies are:
 * Never share code or text on the project. *That also means do not make your solutions
   public on GitHub*{: .text-danger}.
