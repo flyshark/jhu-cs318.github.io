@@ -27,14 +27,14 @@ to 5% extra credit if you do enable VM.
 <A NAME="Project 4 Background"></A>
 <HR SIZE="6">
 <A NAME="SEC76"></A>
-<H2> 5.1 Background </H2>
+<H2> Background </H2>
 <!--docid::SEC76::-->
 <P>
 
 <A NAME="File System New Code"></A>
 <HR SIZE="6">
 <A NAME="SEC77"></A>
-<H3> 5.1.1 New Code </H3>
+<H3> New Code </H3>
 <!--docid::SEC77::-->
 <P>
 
@@ -44,7 +44,7 @@ Here are some files that are probably new to you.  These are in the
 <P>
 
 </P>
-<DL COMPACT>
+<DL COMPACT class="source-listing">
 <DT><Q><TT>fsutil.c</TT></Q>
 <DD>Simple utilities for the file system that are accessible from the
 kernel command line.
@@ -109,7 +109,7 @@ prepared for interactions with all previous parts.
 <A NAME="Testing File System Persistence"></A>
 <HR SIZE="6">
 <A NAME="SEC78"></A>
-<H3> 5.1.2 Testing File System Persistence </H3>
+<H3> Testing File System Persistence </H3>
 <!--docid::SEC78::-->
 <P>
 
@@ -150,7 +150,7 @@ for test <VAR>t</VAR> is named <Q><TT><VAR>t</VAR>.tar</TT></Q>.
 <A NAME="Project 4 Suggested Order of Implementation"></A>
 <HR SIZE="6">
 <A NAME="SEC79"></A>
-<H2> 5.2 Suggested Order of Implementation </H2>
+<H2> Suggested Order of Implementation </H2>
 <!--docid::SEC79::-->
 <P>
 
@@ -197,14 +197,14 @@ You should think about synchronization throughout.
 <A NAME="Project 4 Requirements"></A>
 <HR SIZE="6">
 <A NAME="SEC80"></A>
-<H2> 5.3 Requirements </H2>
+<H2> Requirements </H2>
 <!--docid::SEC80::-->
 <P>
 
 <A NAME="Project 4 Design Document"></A>
 <HR SIZE="6">
 <A NAME="SEC81"></A>
-<H3> 5.3.1 Design Document </H3>
+<H3> 0. Design Document </H3>
 <!--docid::SEC81::-->
 <P>
 
@@ -220,7 +220,7 @@ that goes along with a fictitious project.
 <A NAME="Indexed and Extensible Files"></A>
 <HR SIZE="6">
 <A NAME="SEC82"></A>
-<H3> 5.3.2 Indexed and Extensible Files </H3>
+<H3> 1. Indexed and Extensible Files </H3>
 <!--docid::SEC82::-->
 <P>
 
@@ -235,6 +235,15 @@ rationale for it in your design documentation, and as long as it does
 not suffer from external fragmentation (as does the extent-based file
 system we provide).
 </P>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 4.1</strong>
+</div>
+<div class="panel-body">
+  Modify inode structure to accommodate external fragmentation.
+</div>
+</div>
 <P>
 
 You can assume that the file system partition will not be larger than
@@ -283,13 +292,20 @@ your file system.
 <A NAME="Subdirectories"></A>
 <HR SIZE="6">
 <A NAME="SEC83"></A>
-<H3> 5.3.3 Subdirectories </H3>
+<H3> 2. Subdirectories </H3>
 <!--docid::SEC83::-->
 <P>
 
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 4.2.1</strong>
+</div>
+<div class="panel-body">
 Implement a hierarchical name space.  In the basic file system, all
 files live in a single directory.  Modify this to allow directory
 entries to point to files or to other directories.
+</div>
+</div>
 </P>
 <P>
 
@@ -341,7 +357,14 @@ files in a deleted directory must be disallowed.
 </P>
 <P>
 
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 4.2.2</strong>
+</div>
+<div class="panel-body">
 Implement the following new system calls:
+</div>
+</div>
 </P>
 <P>
 
@@ -437,7 +460,7 @@ extra effort on your part.
 <A NAME="Buffer Cache"></A>
 <HR SIZE="6">
 <A NAME="SEC84"></A>
-<H3> 5.3.4 Buffer Cache </H3>
+<H3> 3. Buffer Cache </H3>
 <!--docid::SEC84::-->
 <P>
 
@@ -457,6 +480,15 @@ to see what combination of accessed, dirty, and other information
 results in the best performance, as measured by the number of disk
 accesses.
 </P>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 4.3</strong>
+</div>
+<div class="panel-body">
+ Implement buffer cache and cache replacement algorithm.
+</div>
+</div>
 <P>
 
 You can keep a cached copy of the free map permanently in memory if you
@@ -510,7 +542,7 @@ turned in projects that failed most or all of the tests.
 <A NAME="File System Synchronization"></A>
 <HR SIZE="6">
 <A NAME="SEC85"></A>
-<H3> 5.3.5 Synchronization </H3>
+<H3> 4. Synchronization </H3>
 <!--docid::SEC85::-->
 <P>
 
@@ -521,6 +553,14 @@ synchronization strategy that does not require external synchronization.
 To the extent possible, operations on independent entities should be
 independent, so that they do not need to wait on each other.
 </P>
+<div class="panel panel-info">
+<div class="panel-heading">
+<strong>Exercise 4.3</strong>
+</div>
+<div class="panel-body">
+  Support finer-grained synchronization of file system
+</div>
+</div>
 <P>
 
 Operations on different cache blocks must be independent.  In
@@ -566,7 +606,7 @@ are accessed only by a single thread.
 <A NAME="Project 4 FAQ"></A>
 <HR SIZE="6">
 <A NAME="SEC86"></A>
-<H2> 5.4 FAQ </H2>
+<H2> FAQ </H2>
 <!--docid::SEC86::-->
 <P>
 
@@ -643,7 +683,7 @@ supports those that do.
 <A NAME="Indexed Files FAQ"></A>
 <HR SIZE="6">
 <A NAME="SEC87"></A>
-<H3> 5.4.1 Indexed Files FAQ </H3>
+<H3> Indexed Files FAQ </H3>
 <!--docid::SEC87::-->
 <P>
 
@@ -662,7 +702,7 @@ your inode organization.
 <A NAME="Subdirectories FAQ"></A>
 <HR SIZE="6">
 <A NAME="SEC88"></A>
-<H3> 5.4.2 Subdirectories FAQ </H3>
+<H3> Subdirectories FAQ </H3>
 <!--docid::SEC88::-->
 <P>
 
@@ -697,7 +737,7 @@ behavior, as well as simply rejecting a name that ends in a slash.
 <A NAME="Buffer Cache FAQ"></A>
 <HR SIZE="6">
 <A NAME="SEC89"></A>
-<H3> 5.4.3 Buffer Cache FAQ </H3>
+<H3> Buffer Cache FAQ </H3>
 <!--docid::SEC89::-->
 <P>
 
@@ -744,4 +784,3 @@ wherever it was in the storage hierarchy.  This will no longer work.
 You will need to change <CODE>inode_byte_to_sector()</CODE> to obtain the
 <CODE>struct inode_disk</CODE> from the cache before using it.
 </DL>
-<A NAME="Reference Guide"></A>
