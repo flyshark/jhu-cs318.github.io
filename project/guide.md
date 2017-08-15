@@ -149,7 +149,7 @@ But we will be only using the snapshot of your code as of the deadline.
 
 The basic policies are:
 * Never share code or text on the project. *That also means do not make your solutions
-  public on GitHub*{: .text-danger}.
+  public on the Internet, e.g., GitHub public repo*{: .text-danger}.
 * Never use someone else's code or text in your solutions.
 * Never consult project code or text found on the Internet.
 * You may read but not copy Linux or BSD source code. *But you must cite any code

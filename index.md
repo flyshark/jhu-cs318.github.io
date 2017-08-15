@@ -12,7 +12,7 @@ systems. Specifically, the course introduces the concepts of processes, concurre
 synchronization, scheduling, multiprogramming, memory management, and file systems.
 
 Prerequisites
-: 600.120 (Intermediate Programming), 600.211 (Unix Systems Programming), 600.226 (Data Structures), 600.233 (Computer Systems Fundamentals). <span class="text-danger">This course involves significant kernel programming tasks</span>. You should: 1). be comfortable and fluent in programming in low-level languages (C and x86 assembly in particular); 2). have experiences of developing in UNIX environment; (3). afford considerable time to commit to the course.
+: 600.120 (Intermediate Programming), 600.211 (Unix Systems Programming), 600.226 (Data Structures), 600.233 (Computer Systems Fundamentals). <span class="text-danger">This course involves significant kernel programming tasks</span>. You should: 1). be comfortable and fluent in programming in low-level languages (C and x86 assembly in particular); 2). have experiences of developing in UNIX environment; 3). afford considerable time to commit to the course.
 
 <hr>
 
