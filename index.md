@@ -48,7 +48,6 @@ Prerequisites
 * [*Modern Operating Systems, 4th Edition (2014)*](https://www.amazon.com/Modern-Operating-Systems-Andrew-Tanenbaum/dp/013359162X), by Tanenbaum and Bos, Pearson, ISBN 978-0133591620 
 * [*Operating System Concepts, 8th Edition (2008)*](https://www.amazon.com/Operating-System-Concepts-Abraham-Silberschatz/dp/0470128720), by Silberschatz, Galvin and Gagne, Wiley, ISBN 978-0470128725.
 
-
 ## Organization
 
 This course is organized as a series of lectures taught by the instructors, assigned readings, discussion sections, homework,
