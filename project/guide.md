@@ -153,8 +153,8 @@ The basic policies are:
 * Never use someone else's code or text in your solutions.
 * Never consult project code or text found on the Internet.
 * You may read but not copy Linux or BSD source code. *But you must cite any code
-  that inspired your code*{: .text-danger}. Code inspired by cited reference will 
-  not constitute cheating. In the worst case, we deduct points if it undermines 
+  that inspired your code*{: .text-danger}. As long as you cite what you used, it's
+  not cheating. In the worst case, we deduct points if it undermines 
   the assignment.
 
 On the other hand, we encourage collaboration in the following form:
