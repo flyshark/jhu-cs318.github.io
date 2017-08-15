@@ -32,9 +32,8 @@ Prerequisites
 
 ## Meetings
 
-| **Lecture:**               | Tuesday/Thursday 09:00am-10:15am <br> Shaffer Hall 301 |
-| **Discussion Section:**    | TBD                                                    |
-| **Midterm Exam:**          | TBD                                                    |
+| **Lecture:**               | Tuesday/Thursday 09:00am-10:15am <br> Ames Hall 234    |
+| **Midterm Exam:**          | Tuesday Oct. 12th, time location TBD                   |
 | **Final Exam:**            | TBD                                                    |
 {: .table .table-bordered .table-hover}
 
