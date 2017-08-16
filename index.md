@@ -90,4 +90,7 @@ Cheating
 
 ## Acknowledgments
 
+The course syllabus and materials are inspired by UCSD CSE 120 and Stanford CS 140
+class. Credits are particularly due to Geoff Voelker (UCSD), Yuanyuan Zhou (UCSD),
+and David Mazières (Stanford).
 

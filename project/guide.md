@@ -74,11 +74,11 @@ larger team size doesn't always yield better performance for the projects.
 ### Getting Started
 To get started, you can get a copy of the Pintos source code distribution.
 ```bash
-git clone https://github.com/ryanphuang/pintos
+git clone https://github.com/jhu-cs318/pintos.git
 ```
 or
 ```bash
-wget https://cs.jhu.edu/~huang/teaching/cs318/fa17/pintos.tar.gz
+wget https://cs.jhu.edu/~huang/cs318/fall17/pintos.tar.gz
 ```
 <div class="panel panel-warning">
   <div class="panel-heading">
