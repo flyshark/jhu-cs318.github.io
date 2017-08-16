@@ -16,128 +16,133 @@ layout: default
   </thead>
   <tbody>
     <tr>
-      <td><b>Week 0</b></td>
-      <td>08/31 Thu</td>
-      <td>Course Intro</td>
-      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/dialogue-threeeasy.pdf">Chapter 1</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf">Chapter 2</a></td>
-      <td></td>
-    </tr>
-    <tr>
       <td rowspan="2"><b>Week 1</b></td>
       <td>09/05 Tue</td>
-      <td>OS Architectural Support</td>
-      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf">Chapter 6</a></td>
+      <td>Course Intro</td>
+      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/dialogue-threeeasy.pdf">Chapter 1</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf">Chapter 2</a></td>
       <td> </td>
     </tr>
     <tr>
       <td>09/07 Thu</td>
+      <td>OS Architectural Support</td>
+      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf">Chapter 6</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="2"><b>Week 2</b></td>
+      <td>09/12 Tue</td>
       <td>Processes</td>
       <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf">Chapter 4</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf">Chapter 5</a></td>
       <td><span class="text-danger">Lab 0 due</span></td>
     </tr>
     <tr>
-      <td rowspan="2"><b>Week 2</b></td>
-      <td>09/12 Tue</td>
+      <td>09/14 Thu</td>
       <td>Threads</td>
       <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf">Chapter 26</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-api.pdf">Chapter 27</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>09/14 Thu</td>
+      <td rowspan="2"><b>Week 3</b></td>
+      <td>09/19 Tue</td>
       <td>Synchronization</td>
       <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf">Chapter 28</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf">Chapter 29</a></td>
       <td></td>
     </tr>
     <tr>
-      <td rowspan="2"><b>Week 3</b></td>
-      <td>09/19 Tue</td>
+      <td>09/21 Thu</td>
       <td>Semaphores and Monitors</td>
       <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-cv.pdf">Chapter 30</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-sema.pdf">Chapter 31</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>09/21 Thu</td>
-      <td>Deadlock</td>
-      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf">Chapter 32</a></td>
-      <td></td>
-    </tr>
-    <tr>
       <td rowspan="2"><b>Week 4</b></td>
       <td>09/26 Tue</td>
-      <td>Scheduling</td>
-      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf">Chapter 7</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf">Chapter 8</a></td>
+      <td>Deadlock</td>
+      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf">Chapter 32</a></td>
       <td><span class="text-danger">Lab 1 due</span><br></td>
     </tr>
     <tr>
       <td>09/28 Thu</td>
-      <td>Virtual Memory I</td>
-      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-mechanism.pdf">Chapter 15</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-segmentation.pdf">Chapter 16</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf">Chapter 18</a></td>
+      <td>Scheduling</td>
+      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf">Chapter 7</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf">Chapter 8</a></td>
       <td></td>
     </tr>
     <tr>
       <td rowspan="2"><b>Week 5</b></td>
       <td>10/03 Tue</td>
+      <td>Virtual Memory I</td>
+      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-mechanism.pdf">Chapter 15</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-segmentation.pdf">Chapter 16</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf">Chapter 18</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>10/05 Thu</td>
       <td>Virtual Memory II</td>
       <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf">Chapter 19</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-smalltables.pdf">Chapter 20</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>10/05 Thu</td>
+      <td rowspan="3"><b>Week 6</b></td>
+      <td>10/10 Tue</td>
       <td>Page Replacement</td>
       <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys.pdf">Chapter 21</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys-policy.pdf">Chapter 22</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-vax.pdf">Chapter 23</a></td>
       <td></td>
     </tr>
     <tr>
-      <td class="warning" rowspan="2"><b>Week 6</b></td>
-      <td>10/10 Tue</td>
+      <td>10/12 Thu</td>
       <td>Midterm review</td>
       <td></td>
       <td></td>
     </tr>
+    <tr>
+      <td>10/13 Fri</td>
+      <td></td>
+      <td></td>
+      <td><span class="text-danger">Lab 2 due</span><br></td>
+    </tr>
     <tr class="warning">
-      <td>10/12 Thu</td>
+      <td rowspan="2"><b>Week 7</b></td>
+      <td>10/17 Tue</td>
       <td><strong>Midterm Exam</strong></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
-      <td rowspan="2"><b>Week 7</b></td>
-      <td>10/17 Tue</td>
+      <td>10/19 Thu</td>
       <td>Dynamic Memory Allocation</td>
       <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-api.pdf">Chapter 14</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf">Chapter 17</a></td>
-      <td><span class="text-danger">Lab 2 due</span><br></td>
-    </tr>
-    <tr>
-      <td>10/19 Thu</td>
-      <td>IO & Disks</td>
-      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf">Chapter 36</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf">Chapter 37</a></td>
       <td></td>
     </tr>
     <tr>
       <td rowspan="2"><b>Week 8</b></td>
       <td>10/24 Tue</td>
-      <td>File Systems I</td>
-      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf">Chapter 39</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf">Chapter 40</a></td>
+      <td>IO & Disks</td>
+      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf">Chapter 36</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf">Chapter 37</a></td>
       <td></td>
     </tr>
     <tr>
       <td>10/26 Thu</td>
-      <td>File Systems II</td>
-      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-ffs.pdf">Chapter 41</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-journaling.pdf">Chapter 42</a></td>
+      <td>File Systems I</td>
+      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf">Chapter 39</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf">Chapter 40</a></td>
       <td></td>
     </tr>
     <tr class="success">
-      <td rowspan="2"><b>Week 9</b></td>
+      <td rowspan="3"><b>Week 9</b></td>
       <td>10/31 Tue</td>
       <td><b>Project hacking day, no class</b></td>
       <td></td>
       <td> </td>
     </tr>
-    <tr class="success">
+    <tr>
       <td>11/02 Thu</td>
-      <td><b>Project hacking day, no class</b></td>
+      <td>File Systems II</td>
+      <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-ffs.pdf">Chapter 41</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-journaling.pdf">Chapter 42</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>11/04 Sat</td>
       <td></td>
       <td></td>
+      <td><span class="text-danger">Lab 3 due</span></td>
     </tr>
     <tr>
       <td rowspan="2"><b>Week 10</b></td>
@@ -149,7 +154,7 @@ layout: default
       <td>11/09 Thu</td>
       <td>Protection</td>
       <td>Read the <a href="http://dl.acm.org/citation.cfm?id=775265.775268">paper</a> by Lampson</td>
-      <td><span class="text-danger">Lab 3 due</span></td>
+      <td></td>
     </tr>
     <tr>
       <td rowspan="2"><b>Week 11</b></td>
@@ -182,7 +187,7 @@ layout: default
       <td>11/30 Thu</td>
       <td>Mobile System</td>
       <td></td>
-      <td></td>
+      <td><span class="text-danger">Lab 4 due</span></td>
     </tr>
     <tr>
       <td rowspan="2"><b>Week 14</b></td>
@@ -194,7 +199,7 @@ layout: default
       <td>12/07 Thu</td>
       <td>Final Review</td>
       <td></td>
-      <td><span class="text-danger">Lab 4 due</span></td>
+      <td></td>
     </tr>
     <tr class="warning">
       <td>TBD</td>

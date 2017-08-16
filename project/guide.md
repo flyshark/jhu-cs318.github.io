@@ -37,7 +37,7 @@ We will start with a pre-project and then do four substantial projects:
   <tr>
     <td><a href="project0.html">Lab 0: Jump Start</a></td>
     <td>2%</td>
-    <td>09/07 11:59 pm</td>
+    <td>09/12 11:59 pm</td>
   </tr>
   <tr>
     <td><a href="project1.html">Lab 1: Threads</a></td>
@@ -47,17 +47,17 @@ We will start with a pre-project and then do four substantial projects:
   <tr>
     <td><a href="project2.html">Lab 2: User Programs</a></td>
     <td>10%</td>
-    <td>10/17 11:59 pm</td>
+    <td>10/13 11:59 pm</td>
   </tr>
   <tr>
     <td><a href="project3.html">Lab 3: Virtual Memory</a></td>
     <td>14%</td>
-    <td>11/09 11:59 pm</td>
+    <td>11/04 11:59 pm</td>
   </tr>
   <tr>
     <td><a href="project4.html">Lab 4: File Systems</a></td>
     <td>16%</td>
-    <td>12/07 11:59 pm</td>
+    <td>11/30 11:59 pm</td>
   </tr>
   </tbody>
 </table>

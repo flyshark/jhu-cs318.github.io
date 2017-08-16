@@ -12,8 +12,8 @@ To develop the Pintos projects, you'll need two essential sets of tools:
 
 The CS department's [lab machines](https://support.cs.jhu.edu/wiki/Category:Linux_Clients)
 already have these tools available. But you may want to work on the projects on
-your own machines. This page contains instructions to help you setup the development
-environment. They are intended for Unix and Mac OS machines. If you
+your own machines to be more productive. This page contains instructions to help 
+you with the core development environment setup. They are intended for Unix and Mac OS machines. If you
 are running Windows, we recommend you to run a virtual machine with Linux or you will 
 have to setup [Cygwin](http://www.cygwin.com) first. This guide, and the course
 in general, assumes you are familiar with Unix commands.
@@ -39,9 +39,17 @@ system's default one, we will add a `i386-elf-` prefix to the build target, *e.g
 </div>
 <div class="panel-body">
 <b>We've provided a script (<code class="highlighter-rouge">pintos/src/misc/toolchain-build.sh</code>) 
-that automates the building of the toolchain.</b>
+that automates the following building instructions. It has been tested on recent version
+of Ubuntu, Mac OS and Fedora.</b>
 </div>
 </div>
+
+* Prerequisite:
+
+  - standard build tools including `make`, `gcc`, etc.. For Ubuntu, they are the
+    `build-essential` package.
+  - in building GDB, you may encounter errors due to missing the ncurses and textinfo 
+    libraries. For Ubuntu, you can install them with `sudo apt-get install libncurses5-dev texinfo`.
 
 * Directory and environment variables:
 
