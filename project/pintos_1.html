@@ -86,26 +86,26 @@ projects.
 
 To get started, you'll have to log into a machine that Pintos can be
 built on.  
-The CS 140 &quot;officially supported&quot; Pintos development machines are
-those in the myth, corn, and cardinal clusters.
-We will test your code on these machines, and the instructions given
-here assume this environment.  We cannot provide support for installing
-and working on Pintos on your own machine, but we provide instructions
-for doing so nonetheless (see section <A HREF="pintos_12.html#SEC163">G. Installing Pintos</A>).
+The CS 318 &quot;officially supported&quot; Pintos development machines are
+those in the ugrad and grad <A HREF="https://support.cs.jhu.edu/wiki/Category:Linux_Clients">lab machines</A> in the JHU CS department.
+We will test your code on these machines.  We also provide a guide
+for installing and working on Pintos on your own machine. (see 
+<A HREF="https://cs.jhu.edu/~huang/cs318/fall17/project/setup.html">Project Setup Page</A>
+and section <A HREF="pintos_12.html#SEC163">G. Installing Pintos</A>).
 </P>
 <P>
 
 Once you've logged into one of these machines, either locally or
 remotely, start out by adding our binaries directory to your <CODE>PATH</CODE>
 environment.  
-Under <CODE>csh</CODE>, Stanford's login shell, you can do so
+Under the <CODE>bash</CODE> login shell, you can do so
 with this command:<A NAME="DOCF1" HREF="pintos_fot.html#FOOT1">(1)</A>
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>set path = ( /usr/class/cs140/`uname -m`/bin $path )
-</pre></td></tr></table><STRONG>Notice that both <Q><SAMP>`</SAMP></Q> are left single quotes or
-&quot;backticks,&quot; not apostrophes (<Q><SAMP>'</SAMP></Q>).</STRONG>
-It is a good idea to add this line to the <Q><TT>.cshrc</TT></Q> file
-in your home directory.  Otherwise, you'll have to type it every time
-you log in.
+<TABLE><tr><td>&nbsp;</td><td class=example><pre>
+export PATH=/usr/local/data/cs318/x86_64/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/data/cs318/x86_64/lib:$LD_LIBRARY_PATH
+</pre></td></tr></table> It is a good idea to add this line to the <Q><TT>.bash_profile</TT></Q> 
+file in your home directory (you may need to logout for it to take effect).  Otherwise, 
+you'll have to type it every time you log in.
 <P>
 
 <A NAME="Source Tree Overview"></A>
@@ -117,8 +117,11 @@ you log in.
 
 Now you can extract the source for Pintos into a directory named
 <Q><TT>pintos/src</TT></Q>, by executing
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>git clone file:///usr/class/cs140/winter13/pintos/.git
-</pre></td></tr></table><P>
+<TABLE><tr><td>&nbsp;</td><td class=example><pre>git clone file:///usr/local/data/cs318/pintos.git
+</pre> if you are using the JHU CS lab machines or 
+<pre>git clone https://github.com/jhu-cs318/pintos.git</pre>
+if you are using your own machine.
+</td></tr></table><P>
 
 Let's take a look at what's inside.  Here's the directory structure
 that you should see in <Q><TT>pintos/src</TT></Q>:
@@ -679,7 +682,7 @@ See section <A HREF="pintos_14.html#SEC169">License</A>, for details of the lice
 </P>
 <P>
 
-In the context of Stanford's CS 140 course, please respect the spirit
+In the context of JHU's CS 318 course, please respect the spirit
 and the letter of the honor code by refraining from reading any homework
 solutions available online or elsewhere.  Reading the source code for
 other operating system kernels, such as Linux or FreeBSD, is allowed,

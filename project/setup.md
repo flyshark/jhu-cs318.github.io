@@ -11,12 +11,19 @@ To develop the Pintos projects, you'll need two essential sets of tools:
 - x86 emulator, QEMU or Bochs
 
 The CS department's [lab machines](https://support.cs.jhu.edu/wiki/Category:Linux_Clients)
-already have these tools available. But you may want to work on the projects on
-your own machines to be more productive. This page contains instructions to help 
-you with the core development environment setup. They are intended for Unix and Mac OS machines. If you
-are running Windows, we recommend you to run a virtual machine with Linux or you will 
-have to setup [Cygwin](http://www.cygwin.com) first. This guide, and the course
-in general, assumes you are familiar with Unix commands.
+already have these tools available under `/usr/local/data/cs318/x86_64`. You just
+need to modify your PATH setting to contain it. Put 
+```
+export PATH=/usr/local/data/cs318/x86_64/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/data/cs318/x86_64/lib:$LD_LIBRARY_PATH
+```
+at the end of you `~/.bash_profile`.
+
+But you may want to work on the projects on your own machines to be more productive. 
+This page contains instructions to help you with the core development environment setup. 
+They are intended for Unix and Mac OS machines. If you are running Windows, we recommend 
+you to run a virtual machine with Linux or you will have to setup [Cygwin](http://www.cygwin.com) 
+first. This guide, and the course in general, assumes you are familiar with Unix commands.
 
 
 ### Compiler toolchain
@@ -39,20 +46,20 @@ system's default one, we will add a `i386-elf-` prefix to the build target, *e.g
 </div>
 <div class="panel-body">
 <b>We've provided a script (<code class="highlighter-rouge">pintos/src/misc/toolchain-build.sh</code>) 
-that automates the following building instructions. It has been tested on recent version
-of Ubuntu, Mac OS and Fedora.</b>
+that automates the following building instructions. So you can just run the script and 
+modify your PATH setting after the build finishes. The script has been tested on 
+recent version of Ubuntu, Mac OS and Fedora.</b>
 </div>
 </div>
 
-* Prerequisite:
-
+* **Prerequisite**:
   - standard build tools including `make`, `gcc`, etc.. For Ubuntu, they are the
     `build-essential` package.
   - in building GDB, you may encounter errors due to missing the ncurses and textinfo 
     libraries. For Ubuntu, you can install them with `sudo apt-get install libncurses5-dev texinfo`.
+  - `wget`
 
 * Directory and environment variables:
-
   First, create a setup directory (e.g., `~/318/toolchain`) and subdirectories that
   look like this:
   ```bash
@@ -126,7 +133,7 @@ of Ubuntu, Mac OS and Fedora.</b>
 After building and installing the toolchain, you need to make sure they are in 
 the PATH. Put <code class="highlighter-rogue">export PATH=/path/to/bin:$PATH</code> and 
 <code class="highlighter-rogue">export LD_LIBRARY_PATH=/path/to/lib:$LD_LIBRARY_PATH</code>
-to the end of your terminal config file (e.g., <code class="highlighter-rogue">.bashrc</code>)
+to the end of your terminal config file (e.g., <code class="highlighter-rogue">.bash_profile</code>)
 so that they are set automatically when you login. Remember to replace 
 <code class="highlighter-rogue">/path/to/{bin,lib}</code> with the actual path, 
 e.g., <code class="highlighter-rogue">~/318/toolchain/dist/bin</code>.
