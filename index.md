@@ -24,7 +24,9 @@ Prerequisites
 	<dd><b>Email: </b><a href="mailto:huang@cs.jhu.edu">huang@cs.jhu.edu</a></dd>
 	<dd><b>Address: </b>Malone 231</dd>
 	<dd><b>Office Hour: </b>TBD</dd>
-	<dt><h4>TA</h4></dt>
+	<dt><h4>Head CA</h4></dt>
+	<dd>Guoye Zhang</dd>
+	<dt><h4>CA/TA</h4></dt>
 	<dd>TBD</dd>
 	<dt><h4>Staff list</h4></dt>
 	<dd><a href="mailto:cs318-staff@cs.jhu.edu">cs318-staff@cs.jhu.edu</a></dd>
