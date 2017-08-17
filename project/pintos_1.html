@@ -105,7 +105,16 @@ export PATH=/usr/local/data/cs318/x86_64/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/data/cs318/x86_64/lib:$LD_LIBRARY_PATH
 </pre></td></tr></table> It is a good idea to add this line to the <Q><TT>.bash_profile</TT></Q> 
 file in your home directory (you may need to logout for it to take effect).  Otherwise, 
-you'll have to type it every time you log in.
+you'll have to type it every time you log in. It is a good idea to add this line to 
+the <Q><TT>.bash_profile</TT></Q> 
+<P>
+
+<P>
+The ugrad lab machines in the CS department use <CODE>tcsh</CODE> login shell by 
+default (typing <CODE>echo $SHELL</CODE> will tell), the syntax for setting 
+<CODE>PATH</CODE> is a bit different. You need to add this line to the <Q><TT>.tcshrc</TT></Q>: 
+<TABLE><tr><td>&nbsp;</td><td class=example><pre>set path = (/usr/local/data/cs318/x86_64/bin $path)
+</pre></td></tr></table>
 <P>
 
 <A NAME="Source Tree Overview"></A>

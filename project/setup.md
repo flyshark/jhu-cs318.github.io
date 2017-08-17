@@ -12,19 +12,22 @@ To develop the Pintos projects, you'll need two essential sets of tools:
 
 The CS department's [lab machines](https://support.cs.jhu.edu/wiki/Category:Linux_Clients)
 already have these tools available under `/usr/local/data/cs318/x86_64`. You just
-need to modify your PATH setting to contain it. Put 
+need to modify your PATH setting to contain it. For Bash, that is to put the
+end of your `~/.bash_profile`:
 ```
 export PATH=/usr/local/data/cs318/x86_64/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/data/cs318/x86_64/lib:$LD_LIBRARY_PATH
 ```
-at the end of you `~/.bash_profile`.
+For tcsh (the default login shell in ugrad lab machines in the CS department), 
+the syntax is different: add `set path = (/usr/local/data/cs318/x86_64/bin $path)` 
+to the end of your `~/.tcshrc`.
 
-But you may want to work on the projects on your own machines to be more productive. 
-This page contains instructions to help you with the core development environment setup. 
-They are intended for Unix and Mac OS machines. If you are running Windows, we recommend 
-you to run a virtual machine with Linux or you will have to setup [Cygwin](http://www.cygwin.com) 
-first. This guide, and the course in general, assumes you are familiar with Unix commands.
-
+Besides the lab machines, you may want to work on the projects on your own machines to be more productive. 
+This page contains instructions to help you with the setup of the core development 
+environment needed for Pintos.  They are intended for Unix and Mac OS machines. 
+If you are running Windows, we recommend you to run a virtual machine with Linux 
+or you will have to setup [Cygwin](http://www.cygwin.com) first. This guide, and 
+the course in general, assumes you are familiar with Unix commands.
 
 ### Compiler toolchain
 
