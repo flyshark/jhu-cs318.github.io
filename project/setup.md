@@ -160,6 +160,17 @@ e.g., <code class="highlighter-rogue">~/318/toolchain/dist/bin</code>.
   - [Download Link](https://sourceforge.net/projects/bochs/files/bochs/2.6.2/bochs-2.6.2.tar.gz/download)
   - Build script: `pintos/src/misc/bochs-2.6.2-build.sh`
 
+### Pintos Utility Tools
+The pintos source distribution comes with a few handy scripts that you will be
+using frequently. They are located within `src/utils/`. The most important one is 
+the `pintos` Perl script, which you will be using to start and run tests
+in pintos. You need to make sure it can be found in your PATH environment
+variable. You can either copy them to a directory within your PATH (e.g., 
+`/usr/local/bin`) or you can just point PATH to the utility directory
+(e.g., `export PATH=/path/to/pintos/src/utils:$PATH`). The Bochs emulator will
+need the squish-pty in the util directory. You can compile it by typing `make`
+in the `src/utils/` directory.
+
 ### Others
 * Required: [Perl](http://www.perl.org). Version 5.8.0 or later.
 * Recommended: [X](https://www.x.org/wiki), [ctags](http://ctags.sourceforge.net/), [cscope](http://cscope.sourceforge.net/)
