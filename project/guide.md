@@ -134,6 +134,21 @@ grade that version. You can still make changes to your repository after the dead
 But we will be only using the snapshot of your code as of the deadline.
 
 <HR SIZE="6">
+### Tips
+
+#### Mac Users
+The original Pintos was mainly developed and tested for Linux (Debian 
+and Ubuntu in particular) and Solaris. It has some issues to run 
+on Mac OS. We have fixed a number of issues and provided scripts
+to make it run more smoothly with Mac OS. They should be working mostly. 
+But one caveat that you should be aware of is that the `setitimer` system call 
+(used by the `pintos` script to control runtime of tests) in Mac OS seems to have some bug, 
+which may trigger premature timeout when using `pintos` with `--qemu`. To work around 
+this, you can either use the Bochs simulator `--bochs` instead (modify the 
+`src/{threads,userprog,vm,filesys}/Make.vars`) or increase the timeout passed to 
+`pintos` (e.g., change TIMEOUT in `src/tests/Make.tests` to 400).
+
+<HR SIZE="6">
 ### Cheating and Collaboration
 <div class="panel panel-danger">
   <div class="panel-heading">
