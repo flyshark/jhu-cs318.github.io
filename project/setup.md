@@ -12,15 +12,15 @@ To develop the Pintos projects, you'll need two essential sets of tools:
 
 The CS department's [lab machines](https://support.cs.jhu.edu/wiki/Category:Linux_Clients)
 already have these tools available under `/usr/local/data/cs318/x86_64`. You just
-need to modify your PATH setting to contain it. For Bash, that is to put the
-end of your `~/.bash_profile`:
+need to modify your PATH setting to include it. For Bash, that is to put the following
+at the end of your `~/.bash_profile`:
 ```
 export PATH=/usr/local/data/cs318/x86_64/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/data/cs318/x86_64/lib:$LD_LIBRARY_PATH
 ```
 For tcsh (the default login shell in ugrad lab machines in the CS department), 
 the syntax is different: add `set path = (/usr/local/data/cs318/x86_64/bin $path)` 
-to the end of your `~/.tcshrc`.
+to the end of your `~/.tcshrc`. Log out and re-login to let it take effect. 
 
 Besides the lab machines, you may want to work on the projects on your own machines to be more productive. 
 This page contains instructions to help you with the setup of the core development 
@@ -153,12 +153,22 @@ e.g., <code class="highlighter-rogue">~/318/toolchain/dist/bin</code>.
     ```
 * **Bochs**:
   - Bochs is slower than QEMU but provides full emulation (i.e., higher accuracy).
-    There are some bugs in Bochs that should be fixed when used with Pintos. Thus,
-    we need to install Bochs from source, and apply patches. We will build two
-    versions of Bochs: one, simply named `bochs`, with the GDB stub enabled, and the
-    other, named `bochs-dbg`, with the built-in debugger enabled.
-  - [Download Link](https://sourceforge.net/projects/bochs/files/bochs/2.6.2/bochs-2.6.2.tar.gz/download)
-  - Build script: `pintos/src/misc/bochs-2.6.2-build.sh`
+  For Lab 1, we will use Bochs as the default emulator and for Lab 2-4, we will
+  use QEMU as the default emulator. Nevertheless, nothing will prevent you from using 
+  one or another for all the labs. There are some bugs in Bochs that should be fixed 
+  when using it with Pintos.  Thus, we need to install Bochs from source, and apply 
+  the patches that we have provided under `pintos/src/misc/bochs*.patch`. We will 
+  build two versions of Bochs: one, simply named `bochs`, with the GDB stub enabled, and the
+  other, named `bochs-dbg`, with the built-in debugger enabled.
+
+  - Version 2.6.2 has been tested to work with Pintos. Newer version of Bochs has 
+  not been tested. <span class="text-info">We have provided a build script
+  <code>pintos/src/misc/bochs-2.6.2-build.sh</code> that will download, patch and
+  build two versions of the Bochs for you. But you need to make sure X11 and its
+  library is installed. For Mac OS, you should install [XQuartz](https://www.xquartz.org).
+
+  - After build succeeds, make sure the `bochs` or `bochs-db` are in PATH. You
+  can verify the install with `bochs --version`.
 
 ### Pintos Utility Tools
 The pintos source distribution comes with a few handy scripts that you will be
@@ -173,4 +183,4 @@ in the `src/utils/` directory.
 
 ### Others
 * Required: [Perl](http://www.perl.org). Version 5.8.0 or later.
-* Recommended: [X](https://www.x.org/wiki), [ctags](http://ctags.sourceforge.net/), [cscope](http://cscope.sourceforge.net/)
+* Recommended: [ctags](http://ctags.sourceforge.net/), [cscope](http://cscope.sourceforge.net/), [NERDTree](https://github.com/scrooloose/nerdtree), [YouCompleteMe](https://github.com/Valloric/YouCompleteMe).
