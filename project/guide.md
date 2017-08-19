@@ -67,8 +67,7 @@ We will start with a pre-project and then do four substantial projects:
 ### Groups
 Lab 0 is an individual project. From Lab 1 and onwards, you can work in groups of 
 1-3 people. We will overlap Lab 0 with the stage of forming groups. So start
-talking with your classmates around once the course begins! Note that, though,
-larger team size doesn't always yield better performance for the projects.
+talking with your classmates around once the course begins! 
 
 <HR SIZE="6">
 ### Getting Started
@@ -104,8 +103,7 @@ refer to the [setup guide](setup.html) for instructions.
   - [Brief overview of the source tree](listing_0.html)
   - [Reference guide](pintos_6.html)
 * The original Pintos [paper](https://benpfaff.org/papers/pintos.pdf)
-* **The original Pintos reference** in [PDF](pintos.pdf), [HTML](pintos.html). *Note that 
-  we've customized it a bit and our version is the official one for this class.*{: .text-info}
+* **The complete Pintos guide** in [PDF](pintos.pdf), [HTML](pintos.html).{: .text-info}
 * The reference [page](/references.html) contains instructions on how to read the Pintos
   reference.
 
