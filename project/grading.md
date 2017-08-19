@@ -92,7 +92,7 @@ of your source code.
 </P>
 <P>
 
-Don't forget that design quality, including the design document, is 50%
+Don't forget that design quality, including the design document, is 30%
 of your project grade.  It
 is better to spend one or two hours writing a good design document than
 it is to spend that time getting the last 5% of the points for tests and
