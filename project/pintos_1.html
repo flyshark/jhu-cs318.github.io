@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
                       "http://www.w3.org/TR/html40/loose.dtd">
 <HTML>
-<!-- Created on August, 12 2017 by texi2html 1.66 -->
+<!-- Created on August, 19 2017 by texi2html 1.66 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -86,12 +86,15 @@ projects.
 
 To get started, you'll have to log into a machine that Pintos can be
 built on.  
-The CS 318 &quot;officially supported&quot; Pintos development machines are
-those in the ugrad and grad <A HREF="https://support.cs.jhu.edu/wiki/Category:Linux_Clients">lab machines</A> in the JHU CS department.
-We will test your code on these machines.  We also provide a guide
-for installing and working on Pintos on your own machine. (see 
-<A HREF="https://cs.jhu.edu/~huang/cs318/fall17/project/setup.html">Project Setup Page</A>
-and section <A HREF="pintos_12.html#SEC163">G. Installing Pintos</A>).
+The CS 318 &quot;officially supported&quot; Pintos development machines are 
+those in the <A HREF="https://support.cs.jhu.edu/wiki/Linux_Clients_on_the_CS_Undergrad_Net">ugrad</A> 
+and <A HREF="https://support.cs.jhu.edu/wiki/Linux_Clients_on_the_CS_Grad/Research_Net">grad</A> 
+lab machines in the JHU CS department.
+We will test your code on these machines, and the instructions given
+here assume this environment.  But you may also want to develop Pintos
+on your own machine to be more productive. We have provided a guide
+for doing the setup. (See <A HREF="https://cs.jhu.edu/~huang/cs318/fall17/project/setup.html">Project Setup</A>,
+and see section <A HREF="pintos_12.html#SEC163">G. Installing Pintos</A>).
 </P>
 <P>
 
@@ -99,23 +102,16 @@ Once you've logged into one of these machines, either locally or
 remotely, start out by adding our binaries directory to your <CODE>PATH</CODE>
 environment.  
 Under the <CODE>bash</CODE> login shell, you can do so
-with this command:<A NAME="DOCF1" HREF="pintos_fot.html#FOOT1">(1)</A>
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>
-export PATH=/usr/local/data/cs318/x86_64/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/data/cs318/x86_64/lib:$LD_LIBRARY_PATH
-</pre></td></tr></table> It is a good idea to add this line to the <Q><TT>.bash_profile</TT></Q> 
-file in your home directory (you may need to logout for it to take effect).  Otherwise, 
-you'll have to type it every time you log in. It is a good idea to add this line to 
-the <Q><TT>.bash_profile</TT></Q> 
-<P>
-
-<P>
-The ugrad lab machines in the CS department use <CODE>tcsh</CODE> login shell by 
-default (typing <CODE>echo $SHELL</CODE> will tell), the syntax for setting 
-<CODE>PATH</CODE> is a bit different. You need to add this line to the <Q><TT>.tcshrc</TT></Q>: 
+with this command:
+<TABLE><tr><td>&nbsp;</td><td class=example><pre>export PATH=/usr/local/data/cs318/x86_64/bin:$PATH
+</pre></td></tr></table>It is a good idea to add this line to the <Q><TT>.bash_profile</TT></Q> or <Q><TT>.bashrc</TT></Q> file
+in your home directory. Otherwise, you'll have to type it every time
+you log in. The ugrad lab machines in the CS department use <CODE>tcsh</CODE> login 
+shell by default (typing <CODE>echo $SHELL</CODE> will tell), the syntax for setting 
+PATH is a bit different. You need to add this line to the <Q><TT>.tcshrc</TT></Q> with
+this command:
 <TABLE><tr><td>&nbsp;</td><td class=example><pre>set path = (/usr/local/data/cs318/x86_64/bin $path)
-</pre></td></tr></table>
-<P>
+</pre></td></tr></table><P>
 
 <A NAME="Source Tree Overview"></A>
 <HR SIZE="6">
@@ -125,12 +121,13 @@ default (typing <CODE>echo $SHELL</CODE> will tell), the syntax for setting
 <P>
 
 Now you can extract the source for Pintos into a directory named
-<Q><TT>pintos/src</TT></Q>, by executing
+<Q><TT>pintos/src</TT></Q>, by fetching the <A HREF="https://cs.jhu.edu/~huang/cs318/fall17/pintos.tar.gz">https://cs.jhu.edu/~huang/cs318/fall17/pintos.tar.gz</A>.
+You can also quickly clone a git repository of pintos. If you are using 
+the JHU CS lab machines, execute 
 <TABLE><tr><td>&nbsp;</td><td class=example><pre>git clone file:///usr/local/data/cs318/pintos.git
-</pre> if you are using the JHU CS lab machines or 
-<pre>git clone https://github.com/jhu-cs318/pintos.git</pre>
-if you are using your own machine.
-</td></tr></table><P>
+</pre></td></tr></table>If you are using your own machines, execute
+<TABLE><tr><td>&nbsp;</td><td class=example><pre>git clone https://github.com/jhu-cs318/pintos.git
+</pre></td></tr></table><P>
 
 Let's take a look at what's inside.  Here's the directory structure
 that you should see in <Q><TT>pintos/src</TT></Q>:
@@ -428,7 +425,7 @@ mode.
 <P>
 
 We will grade your assignments based on test results and design quality,
-each of which comprises 50% of your grade.
+which comprises 70% and 30% of your grade, respectively.
 </P>
 <P>
 
@@ -516,7 +513,7 @@ of your source code.
 </P>
 <P>
 
-Don't forget that design quality, including the design document, is 50%
+Don't forget that design quality, including the design document, is 30%
 of your project grade.  It
 is better to spend one or two hours writing a good design document than
 it is to spend that time getting the last 5% of the points for tests and
@@ -691,7 +688,7 @@ See section <A HREF="pintos_14.html#SEC169">License</A>, for details of the lice
 </P>
 <P>
 
-In the context of JHU's CS 318 course, please respect the spirit
+In the context of JHU CS 318 course, please respect the spirit
 and the letter of the honor code by refraining from reading any homework
 solutions available online or elsewhere.  Reading the source code for
 other operating system kernels, such as Linux or FreeBSD, is allowed,
@@ -775,7 +772,7 @@ trouble with blow-ups.
 <BR>
 <FONT SIZE="-1">
 This document was generated
-by <I>Ryan Huang</I> on <I>August, 12 2017</I>
+by <I>Ryan Huang</I> on <I>August, 19 2017</I>
 using <A HREF="http://texi2html.cvshome.org"><I>texi2html</I></A>
 </FONT>
 

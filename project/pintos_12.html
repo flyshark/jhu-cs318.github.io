@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
                       "http://www.w3.org/TR/html40/loose.dtd">
 <HTML>
-<!-- Created on August, 12 2017 by texi2html 1.66 -->
+<!-- Created on August, 19 2017 by texi2html 1.66 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -61,12 +61,11 @@ the following, on top of standard Unix utilities:
 <UL>
 <LI>
 Required: <A HREF="http://gcc.gnu.org/">GCC</A>.  Version 4.0 or later is
-preferred.  Version 3.3 or later should work.  If the host machine has
-an 80<VAR>x</VAR>86 processor, then GCC should be available as <CODE>gcc</CODE>;
+preferred.  If the host machine has an 80<VAR>x</VAR>86 processor, then 
+GCC should be available as <CODE>gcc</CODE>;
 otherwise, an 80<VAR>x</VAR>86 cross-compiler should be available as
-<CODE>i386-elf-gcc</CODE>.  A sample set of commands for installing GCC
-3.3.6 as a cross-compiler are included in
-<Q><TT>src/misc/gcc-3.3.6-cross-howto</TT></Q>.
+<CODE>i386-elf-gcc</CODE>.  We provide a <A HREF="https://cs.jhu.edu/~huang/cs318/fall17/project/setup.html">setup guide</A> 
+and a script (<Q><TT>src/misc/toolchain-build.sh</TT></Q>) for installing GCC, binutils, and GDB.
 <P>
 
 </P>
@@ -164,10 +163,8 @@ about missing <Q><TT>gdb-macros</TT></Q>, it is installed correctly.
 </P>
 <LI>
 Compile the remaining Pintos utilities by typing <CODE>make</CODE> in
-<Q><TT>src/utils</TT></Q>.  Install <Q><TT>squish-pty</TT></Q> somewhere in <CODE>PATH</CODE>.
-To support VMware Player, install <Q><TT>squish-unix</TT></Q>.
-If your Perl is older than version 5.8.0, also install
-<Q><TT>setitimer-helper</TT></Q>; otherwise, it is unneeded.
+<Q><TT>src/utils</TT></Q>.  Install <Q><TT>squish-pty</TT></Q>, <Q><TT>squish-unix</TT></Q> and
+<Q><TT>setitimer-helper</TT></Q> somewhere in <CODE>PATH</CODE>.
 <P>
 
 </P>
@@ -225,7 +222,7 @@ should be configured, by passing <Q><SAMP>--with-x --with-x11 --with-term
 </P>
 <P>
 
-This version of Pintos is designed for use with Bochs 2.6.2.  A number
+This version of Pintos is designed for use with Bochs 2.2.6.  A number
 of patches for this version of Bochs are included in <Q><TT>src/misc</TT></Q>:
 </P>
 <P>
@@ -234,6 +231,7 @@ of patches for this version of Bochs are included in <Q><TT>src/misc</TT></Q>:
 <DL COMPACT>
 <DT><Q><TT>bochs-2.6.2-jitter-plus-segv.patch</TT></Q>
 <DD><P>
+
 Adds the &quot;jitter&quot; feature, in which timer interrupts are delivered at
 random intervals (see section <A HREF="pintos_1.html#SEC6">1.1.4 Debugging versus Testing</A>).
 </P>
@@ -253,6 +251,9 @@ Fix configure flag for x11 xrandr.
 
 Use stderr to print the Bochs banner information.
 </P>
+<P>
+
+</P>
 <DT><Q><TT>bochs-2.6.2-block-device-check.patch</TT></Q>
 <DD><P>
 
@@ -261,6 +262,7 @@ Update block device check.
 <P>
 
 </DL>
+<P>
 
 To apply all the patches, <CODE>cd</CODE> into the Bochs directory, then
 type:
@@ -288,7 +290,7 @@ Sample commands to build and install Bochs for Pintos are supplied in
 <BR>
 <FONT SIZE="-1">
 This document was generated
-by <I>Ryan Huang</I> on <I>August, 12 2017</I>
+by <I>Ryan Huang</I> on <I>August, 19 2017</I>
 using <A HREF="http://texi2html.cvshome.org"><I>texi2html</I></A>
 </FONT>
 

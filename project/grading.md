@@ -5,8 +5,8 @@ title: Pintos Project Grading Policies
 
 ## Grading
 
-We will grade your assignments based on test results (**70% of your grade**)
-as well as design quality (**30% of your grade**). The [grading policy page](grading.html)
+We will grade your assignments based on test results and design quality,
+which comprises **70%** and **30%** of your grade, respectively. 
 
 <HR SIZE="6">
 ### Test Results
