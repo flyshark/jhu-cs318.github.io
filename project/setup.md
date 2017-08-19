@@ -134,12 +134,13 @@ recent version of Ubuntu, Mac OS and Fedora.</b>
 </div>
 <div class="panel-body">
 After building and installing the toolchain, you need to make sure they are in 
-the PATH. Put <code class="highlighter-rogue">export PATH=/path/to/bin:$PATH</code> and 
-<code class="highlighter-rogue">export LD_LIBRARY_PATH=/path/to/lib:$LD_LIBRARY_PATH</code>
+the PATH. Put <code class="highlighter-rogue">export PATH=/path/to/swd/dist/bin:$PATH</code> 
 to the end of your terminal config file (e.g., <code class="highlighter-rogue">.bash_profile</code>)
 so that they are set automatically when you login. Remember to replace 
-<code class="highlighter-rogue">/path/to/{bin,lib}</code> with the actual path, 
-e.g., <code class="highlighter-rogue">~/318/toolchain/dist/bin</code>.
+<code class="highlighter-rogue">/path/to/swd/dist/bin</code> with the actual path, 
+e.g., <code class="highlighter-rogue">~/318/toolchain/dist/bin</code>. You may also
+want to delete the source and build directories in <code>/path/to/swd/{src,build}</code> 
+to save space.
 </div>
 </div>
 
@@ -166,6 +167,7 @@ e.g., <code class="highlighter-rogue">~/318/toolchain/dist/bin</code>.
   <code>pintos/src/misc/bochs-2.6.2-build.sh</code> that will download, patch and
   build two versions of the Bochs for you. But you need to make sure X11 and its
   library is installed. For Mac OS, you should install [XQuartz](https://www.xquartz.org).
+  For Ubuntu, you should have `libx11-dev` and `libxrandr-dev` installed.
 
   - After build succeeds, make sure the `bochs` or `bochs-db` are in PATH. You
   can verify the install with `bochs --version`.
@@ -175,11 +177,13 @@ The pintos source distribution comes with a few handy scripts that you will be
 using frequently. They are located within `src/utils/`. The most important one is 
 the `pintos` Perl script, which you will be using to start and run tests
 in pintos. You need to make sure it can be found in your PATH environment
-variable. You can either copy them to a directory within your PATH (e.g., 
-`/usr/local/bin`) or you can just point PATH to the utility directory
-(e.g., `export PATH=/path/to/pintos/src/utils:$PATH`). The Bochs emulator will
-need the squish-pty in the util directory. You can compile it by typing `make`
-in the `src/utils/` directory.
+variable, e.g., (replace `/path/to/swd/dist` with the actual directory path)
+```bash
+$ cd pintos/src/utils && make
+$ cp backtrace pintos Pintos.pm pintos-gdb pintos-set-cmdline pintos-mkdisk setitimer-helper squish-pty squish-unix /path/to/swd/dist/bin
+$ mkdir /path/to/swd/dist/misc
+$ cp pintos/src/gdb-macros /path/to/swd/misc
+```
 
 ### Others
 * Required: [Perl](http://www.perl.org). Version 5.8.0 or later.

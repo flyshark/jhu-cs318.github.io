@@ -7,11 +7,8 @@ compilers, architecture. Often times, the lengthy manual is the only reference t
 Pintos is a small and simple OS. But in doing the projects, you will run into many situations where 
 you need to look up some documentation. This course will be one of the few courses where you will
 be reading a lot of documentations, which hopefully helps you become efficient at it and write better 
-documentations later.
-
-For the listed references, you don't need to go through them from beginning to end (especially 
-for these architecture manuals) unless it's recommended so. But you may find useful information 
-in them from time to time.
+documentations later. For the listed references, you don't need to go over them from beginning 
+to end at once unless it's recommended so. 
 
 ### Pintos
 
