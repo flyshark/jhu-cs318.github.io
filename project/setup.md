@@ -173,11 +173,17 @@ to save space.
   can verify the install with `bochs --version`.
 
 ### Pintos Utility Tools
-The pintos source distribution comes with a few handy scripts that you will be
+The Pintos source distribution comes with a few handy scripts that you will be
 using frequently. They are located within `src/utils/`. The most important one is 
 the `pintos` Perl script, which you will be using to start and run tests
 in pintos. You need to make sure it can be found in your PATH environment
-variable, e.g., (replace `/path/to/swd/dist` with the actual directory path)
+variable. In addition, the `src/misc/gdb-macros` is provided with a number of
+GDB macros that you will find useful when you are debugging Pintos. The `pintos-gdb`
+is a wrapper around the `i386-elf-gdb` that reads this macro file at start. 
+It assumes the macro file resides in `../misc`.
+
+The example commands to do the above setup for the Pintos utilities are:
+(replace `/path/to/swd/dist` with the actual directory path)
 ```bash
 $ cd pintos/src/utils && make
 $ cp backtrace pintos Pintos.pm pintos-gdb pintos-set-cmdline pintos-mkdisk setitimer-helper squish-pty squish-unix /path/to/swd/dist/bin
@@ -187,4 +193,16 @@ $ cp pintos/src/gdb-macros /path/to/swd/misc
 
 ### Others
 * Required: [Perl](http://www.perl.org). Version 5.8.0 or later.
-* Recommended: [ctags](http://ctags.sourceforge.net/), [cscope](http://cscope.sourceforge.net/), [NERDTree](https://github.com/scrooloose/nerdtree), [YouCompleteMe](https://github.com/Valloric/YouCompleteMe).
+* Recommended: 
+  - [ctags](http://ctags.sourceforge.net/)
+  - [cscope](http://cscope.sourceforge.net/)
+  - [cgdb](https://cgdb.github.io)
+  - [NERDTree](https://github.com/scrooloose/nerdtree)
+  - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe).
+* Optional:
+  - GUI IDEs like [Eclipse CDT](https://eclipse.org/cdt) or [clion](http://www.jetbrains.com/clion). 
+    The instructor has not tried them. Vim or Emacs plus the standard Unix development
+    tools would suffice for the course. But if you can't live without GUI IDEs. You
+    may explore the setup yourself (potential 
+    [reference](https://uchicago-cs.github.io/mpcs52030/pintos_eclipse.html)) and
+    let us know if they are helpful!
