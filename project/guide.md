@@ -35,7 +35,7 @@ We will start with a pre-project and then do four substantial projects:
   </thead>
   <tbody>
   <tr>
-    <td><a href="project0.html">Lab 0: Jump Start</a></td>
+    <td><a href="project0.html">Lab 0: Getting Real</a></td>
     <td>2%</td>
     <td>09/12 11:59 pm</td>
   </tr>
