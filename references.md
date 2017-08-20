@@ -15,7 +15,7 @@ to end at once unless it's recommended so.
 * You should read everything below before attempting any of the projects:
   - [Getting Started](project/pintos_1.html)
   - [Coding Standards](project/pintos_8.html)
-  - [Project Documentation](project/pintos_9.html)
+  - [Design Document](project/pintos_9.html)
 
 * You need not read the reference guide, but you may find the information in it valuable from time to time:
   - [Reference Guide](project/pintos_6.html)

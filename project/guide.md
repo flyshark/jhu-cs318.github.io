@@ -103,9 +103,9 @@ refer to the [setup guide](setup.html) for instructions.
   - [Brief overview of the source tree](listing_0.html)
   - [Reference guide](pintos_6.html)
 * The original Pintos [paper](https://benpfaff.org/papers/pintos.pdf)
-* **The complete Pintos guide** in [PDF](pintos.pdf), [HTML](pintos.html).{: .text-info}
+* **The complete Pintos documentation** in [PDF](pintos.pdf), [HTML](pintos.html).{: .text-info}
 * The reference [page](/references.html) contains instructions on how to read the Pintos
-  reference.
+  documentation.
 
 <HR SIZE="6">
 ### Version Control

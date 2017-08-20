@@ -58,7 +58,7 @@ Questions on examinations will be based on material covered in class, assigned r
 
 | **Lectures:** | Core material of the course.                                                               |
 | **Readings:** | The textbook and supplementary readings provide references to lectures, and are good preparations before class. But they are not a substitute for the lectures. In other words, you should come to class. |
-| **Projects:** | Four programming assignments, each completed individually or in groups (of no more than 2). They are essential for you to turn the theories you learned into practices. |
+| **Projects:** | Five programming assignments, each completed individually or in groups (of no more than 3). They are essential for you to turn the theories you learned into practices. |
 | **Homework:** | Optional homework questions for exam preparation (not to be turned in)                     |
 | **Exams:**    | Midterm examination and a final exam                                                       |
 {: .table}

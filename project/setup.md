@@ -16,7 +16,6 @@ need to modify your PATH setting to include it. For Bash, that is to put the fol
 at the end of your `~/.bash_profile`:
 ```
 export PATH=/usr/local/data/cs318/x86_64/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/data/cs318/x86_64/lib:$LD_LIBRARY_PATH
 ```
 For tcsh (the default login shell in ugrad lab machines in the CS department), 
 the syntax is different: add `set path = (/usr/local/data/cs318/x86_64/bin $path)` 
@@ -24,8 +23,8 @@ to the end of your `~/.tcshrc`. Log out and re-login to let it take effect.
 
 Besides the lab machines, you may want to work on the projects on your own machines to be more productive. 
 This page contains instructions to help you with the setup of the core development 
-environment needed for Pintos.  They are intended for Unix and Mac OS machines. 
-If you are running Windows, we recommend you to run a virtual machine with Linux 
+environment needed for Pintos on your own machines.  They are intended for Unix and 
+Mac OS machines. If you are running Windows, we recommend you to run a virtual machine with Linux 
 or you will have to setup [Cygwin](http://www.cygwin.com) first. This guide, and 
 the course in general, assumes you are familiar with Unix commands.
 
@@ -68,7 +67,7 @@ recent version of Ubuntu, Mac OS and Fedora.</b>
   ```bash
   /path/to/setup
   ├── build
-  ├── dist
+  ├── x86_64
   └── src
   ```
 
@@ -76,7 +75,7 @@ recent version of Ubuntu, Mac OS and Fedora.</b>
   *full path* to the actual setup directory you've created, e.g., `SWD=/home/ryan/318/toolchain`).
   ```bash
   $ SWD=/path/to/setup
-  $ PREFIX=$SWD/dist
+  $ PREFIX=$SWD/x86_64
   $ export PATH=$PREFIX/bin:$PATH
   $ export LD_LIBRARY_PATH=$PREFIX/lib:$LD_LIBRARY_PATH
   ```
@@ -134,11 +133,11 @@ recent version of Ubuntu, Mac OS and Fedora.</b>
 </div>
 <div class="panel-body">
 After building and installing the toolchain, you need to make sure they are in 
-the PATH. Put <code class="highlighter-rogue">export PATH=/path/to/swd/dist/bin:$PATH</code> 
+the PATH. Put <code class="highlighter-rogue">export PATH=/path/to/swd/x86_64/bin:$PATH</code> 
 to the end of your terminal config file (e.g., <code class="highlighter-rogue">.bash_profile</code>)
 so that they are set automatically when you login. Remember to replace 
-<code class="highlighter-rogue">/path/to/swd/dist/bin</code> with the actual path, 
-e.g., <code class="highlighter-rogue">~/318/toolchain/dist/bin</code>. You may also
+<code class="highlighter-rogue">/path/to/swd/x86_64/bin</code> with the actual path, 
+e.g., <code class="highlighter-rogue">~/318/toolchain/x86_64/bin</code>. You may also
 want to delete the source and build directories in <code>/path/to/swd/{src,build}</code> 
 to save space.
 </div>
@@ -183,11 +182,11 @@ is a wrapper around the `i386-elf-gdb` that reads this macro file at start.
 It assumes the macro file resides in `../misc`.
 
 The example commands to do the above setup for the Pintos utilities are:
-(replace `/path/to/swd/dist` with the actual directory path)
+(replace `/path/to/swd/x86_64` with the actual directory path)
 ```bash
 $ cd pintos/src/utils && make
-$ cp backtrace pintos Pintos.pm pintos-gdb pintos-set-cmdline pintos-mkdisk setitimer-helper squish-pty squish-unix /path/to/swd/dist/bin
-$ mkdir /path/to/swd/dist/misc
+$ cp backtrace pintos Pintos.pm pintos-gdb pintos-set-cmdline pintos-mkdisk setitimer-helper squish-pty squish-unix /path/to/swd/x86_64/bin
+$ mkdir /path/to/swd/x86_64/misc
 $ cp pintos/src/gdb-macros /path/to/swd/misc
 ```
 
