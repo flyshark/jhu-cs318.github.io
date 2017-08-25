@@ -2,14 +2,10 @@
 layout: project
 title: Project 1--Threads
 ---
-<A NAME="SEC15"></A>
+<A NAME="SEC25"></A>
 <H1> Project 1: Threads </H1>
-<!--docid::SEC15::-->
+<!--docid::SEC25::-->
 <P>
-
-<P>
-<strong>Due: </strong><span class="text-danger">Tuesday 09/12 11:59 pm</span>
-</P>
 
 In this assignment, we give you a minimally functional thread system.
 Your job is to extend the functionality of this system to gain a
@@ -24,25 +20,25 @@ side.  Compilation should be done in the <Q><TT>threads</TT></Q> directory.
 <P>
 
 Before you read the description of this project, you should read all of
-the following sections: <A HREF="pintos_1.html#SEC1">1. Introduction</A>, <A HREF="pintos_8.html#SEC138">C. Coding Standards</A>,
-<A HREF="pintos_10.html#SEC145">E. Debugging Tools</A>, and <A HREF="pintos_11.html#SEC158">F. Development Tools</A>.  You should at least
-skim the material from <A HREF="pintos_6.html#SEC91">A.1 Loading</A> through <A HREF="pintos_6.html#SEC111">A.5 Memory Allocation</A>, especially <A HREF="pintos_6.html#SEC100">A.3 Synchronization</A>.  To complete this project
-you will also need to read <A HREF="pintos_7.html#SEC131">B. 4.4<ACRONYM>BSD</ACRONYM> Scheduler</A>.
+the following sections: <A HREF="pintos_1.html#SEC1">1. Introduction</A>, <A HREF="pintos_9.html#SEC148">C. Coding Standards</A>,
+<A HREF="pintos_11.html#SEC155">E. Debugging Tools</A>, and <A HREF="pintos_12.html#SEC168">F. Development Tools</A>.  You should at least
+skim the material from <A HREF="pintos_7.html#SEC101">A.1 Loading</A> through <A HREF="pintos_7.html#SEC121">A.5 Memory Allocation</A>, especially <A HREF="pintos_7.html#SEC110">A.3 Synchronization</A>.  To complete this project
+you will also need to read <A HREF="pintos_8.html#SEC141">B. 4.4<ACRONYM>BSD</ACRONYM> Scheduler</A>.
 </P>
 <P>
 
 <A NAME="Project 1 Background"></A>
 <HR SIZE="6">
-<A NAME="SEC16"></A>
+<A NAME="SEC26"></A>
 <H2> Background </H2>
-<!--docid::SEC16::-->
+<!--docid::SEC26::-->
 <P>
 
 <A NAME="Understanding Threads"></A>
 <HR SIZE="6">
-<A NAME="SEC17"></A>
+<A NAME="SEC27"></A>
 <H3> Understanding Threads </H3>
-<!--docid::SEC17::-->
+<!--docid::SEC27::-->
 <P>
 
 The first step is to read and understand the code for the initial thread
@@ -96,9 +92,9 @@ thread we're switching to.
 <P>
 
 Using the GDB debugger, slowly trace through a context
-switch to see what happens (see section <A HREF="pintos_10.html#SEC151">E.5 GDB</A>).  You can set a
+switch to see what happens (see section <A HREF="pintos_11.html#SEC161">E.5 GDB</A>).  You can set a
 breakpoint on <CODE>schedule()</CODE> to start out, and then
-single-step from there.<A NAME="DOCF2" HREF="pintos_fot.html#FOOT2">(2)</A>  Be sure
+single-step from there.<A NAME="DOCF1" HREF="pintos_fot.html#FOOT1">(1)</A>  Be sure
 to keep track of each thread's address
 and state, and what procedures are on the call stack for each thread.
 You will notice that when one thread calls <CODE>switch_threads()</CODE>,
@@ -106,21 +102,22 @@ another thread starts running, and the first thing the new thread does
 is to return from <CODE>switch_threads()</CODE>.  You will understand the thread
 system once you understand why and how the <CODE>switch_threads()</CODE> that
 gets called is different from the <CODE>switch_threads()</CODE> that returns.
-See section <A HREF="pintos_6.html#SEC99">A.2.3 Thread Switching</A>, for more information.
+See section <A HREF="pintos_7.html#SEC109">A.2.3 Thread Switching</A>, for more information.
 </P>
 <P>
+
 <div class="panel panel-warning">
   <div class="panel-heading">
     <strong>Warning!</strong>
   </div>
   <div class="panel-body">
-  In Pintos, each thread is assigned a small,
+In Pintos, each thread is assigned a small,
 fixed-size execution stack just under 4 kB in size.  The kernel
 tries to detect stack overflow, but it cannot do so perfectly.  You
 may cause bizarre problems, such as mysterious kernel panics, if you
 declare large data structures as non-static local variables,
 e.g. <Q><SAMP>int buf[1000];</SAMP></Q>.  Alternatives to stack allocation include
-the page allocator and the block allocator (see section <A HREF="pintos_6.html#SEC111">A.5 Memory Allocation</A>).
+the page allocator and the block allocator (see section <A HREF="pintos_7.html#SEC121">A.5 Memory Allocation</A>).
   </div>
 </div>
 </P>
@@ -128,10 +125,9 @@ the page allocator and the block allocator (see section <A HREF="pintos_6.html#S
 
 <A NAME="Project 1 Source Files"></A>
 <HR SIZE="6">
-<A NAME="SEC18"></A>
+<A NAME="SEC28"></A>
 <H3> Source Files </H3>
-<!--docid::SEC18::-->
-</P>
+<!--docid::SEC28::-->
 <P>
 
 Refer to <a href="listing_1.html" target="_blank">link</a> for a brief overview of the files in the <Q><TT>threads</TT></Q>
@@ -142,19 +138,19 @@ code to look at.
 
 <A NAME="Project 1 Synchronization"></A>
 <HR SIZE="6">
-<A NAME="SEC21"></A>
+<A NAME="SEC31"></A>
 <H3> Synchronization </H3>
-<!--docid::SEC21::-->
+<!--docid::SEC31::-->
 <P>
 
 Proper synchronization is an important part of the solutions to these
 problems.  Any synchronization problem can be easily solved by turning
 interrupts off: while interrupts are off, there is no concurrency, so
 there's no possibility for race conditions.  Therefore, it's tempting to
-solve all synchronization problems this way, but <span class="text-danger"><STRONG>don't</STRONG></span>.
+solve all synchronization problems this way, but <STRONG>don't</STRONG>.
 Instead, use semaphores, locks, and condition variables to solve the
 bulk of your synchronization problems.  Read the tour section on
-synchronization (see section <A HREF="pintos_6.html#SEC100">A.3 Synchronization</A>) or the comments in
+synchronization (see section <A HREF="pintos_7.html#SEC110">A.3 Synchronization</A>) or the comments in
 <Q><TT>threads/synch.c</TT></Q> if you're unsure what synchronization primitives
 may be used in what situations.
 </P>
@@ -207,9 +203,9 @@ calls <CODE>thread_yield()</CODE> is one form of busy waiting.
 
 <A NAME="Development Suggestions"></A>
 <HR SIZE="6">
-<A NAME="SEC22"></A>
+<A NAME="SEC32"></A>
 <H3> Development Suggestions </H3>
-<!--docid::SEC22::-->
+<!--docid::SEC32::-->
 <P>
 
 In the past, many groups divided the assignment into pieces, then each
@@ -224,7 +220,7 @@ boot, much less pass any tests.
 <P>
 
 Instead, we recommend integrating your team's changes early and often,
-using a source code control system such as Git (see section <A HREF="pintos_11.html#SEC161">F.3 Git</A>).
+using a source code control system such as Git (see section <A HREF="pintos_12.html#SEC171">F.3 Git</A>).
 This is less likely to produce surprises, because everyone can see
 everyone else's code as it is written, instead of just when it is
 finished.  These systems also make it possible to review changes and,
@@ -236,40 +232,41 @@ You should expect to run into bugs that you simply don't understand
 while working on this and subsequent projects.  When you do,
 reread the appendix on debugging tools, which is filled with
 useful debugging tips that should help you to get back up to speed
-(see section <A HREF="pintos_10.html#SEC145">E. Debugging Tools</A>).  Be sure to read the section on backtraces
-(see section <A HREF="pintos_10.html#SEC149">E.4 Backtraces</A>), which will help you to get the most out of every
+(see section <A HREF="pintos_11.html#SEC155">E. Debugging Tools</A>).  Be sure to read the section on backtraces
+(see section <A HREF="pintos_11.html#SEC159">E.4 Backtraces</A>), which will help you to get the most out of every
 kernel panic or assertion failure.
 </P>
 <P>
 
 <A NAME="Project 1 Requirements"></A>
 <HR SIZE="6">
-<A NAME="SEC23"></A>
+<A NAME="SEC33"></A>
 <H2> Requirements </H2>
-<!--docid::SEC23::-->
+<!--docid::SEC33::-->
 <P>
 
 <A NAME="Project 1 Design Document"></A>
 <HR SIZE="6">
-<A NAME="SEC24"></A>
+<A NAME="SEC34"></A>
 <H3> 0. Design Document </H3>
-<!--docid::SEC24::-->
+<!--docid::SEC34::-->
 <P>
 
 Before you turn in your project, you must copy <A HREF="threads.tmpl">the
 project 1 design document template</A> into your source tree under the name
 <Q><TT>pintos/src/threads/DESIGNDOC</TT></Q> and fill it in.  We recommend that
 you read the design document template before you start working on the
-project.  See section <A HREF="pintos_9.html#SEC142">D. Project Documentation</A>, for a sample design document
+project.  See section <A HREF="pintos_10.html#SEC152">D. Project Documentation</A>, for a sample design document
 that goes along with a fictitious project.
 </P>
 <P>
 
 <A NAME="Alarm Clock"></A>
 <HR SIZE="6">
-<A NAME="SEC25"></A>
+<A NAME="SEC35"></A>
 <H3> 1. Alarm Clock </H3>
-<!--docid::SEC25::-->
+<!--docid::SEC35::-->
+<P>
 
 <div class="panel panel-info">
 <div class="panel-heading">
@@ -283,7 +280,7 @@ is, it spins in a loop checking the current time and calling
 avoid busy waiting.
 </div>
 </div>
-
+</P>
 <P>
 
 <A NAME="IDX1"></A>
@@ -331,9 +328,9 @@ although it could be useful for project 4.
 
 <A NAME="Priority Scheduling"></A>
 <HR SIZE="6">
-<A NAME="SEC26"></A>
+<A NAME="SEC36"></A>
 <H3> 2. Priority Scheduling </H3>
-<!--docid::SEC26::-->
+<!--docid::SEC36::-->
 <P>
 
 <div class="panel panel-info">
@@ -352,8 +349,9 @@ priority such that it no longer has the highest priority must cause it
 to immediately yield the CPU.
 </div>
 </div>
-
+</P>
 <P>
+
 Thread priorities range from <CODE>PRI_MIN</CODE> (0) to <CODE>PRI_MAX</CODE> (63).
 Lower numbers correspond to lower priorities, so that priority 0
 is the lowest priority and priority 63 is the highest.
@@ -382,7 +380,7 @@ the donation once <VAR>L</VAR> releases (and thus <VAR>H</VAR> acquires) the loc
 </div>
 <div class="panel-body">
 Implement priority donation.  You will need to account for all different
-situations in which priority donation is required. 
+situations in which priority donation is required.  
 </div>
 </div>
 
@@ -400,6 +398,7 @@ implement priority donation for the other Pintos synchronization
 constructs.  You do need to implement priority scheduling in all
 cases.
 </P>
+<P>
 
 <div class="panel panel-info">
 <div class="panel-heading">
@@ -409,8 +408,12 @@ cases.
 Finally, implement the following functions that allow a thread to
 examine and modify its own priority.  Skeletons for these functions are
 provided in <Q><TT>threads/thread.c</TT></Q>.
+</div>
+</div>
 
+</P>
 <P>
+
 <A NAME="IDX2"></A>
 </P>
 <DL>
@@ -427,9 +430,7 @@ current thread no longer has the highest priority, yields.
 <DD>Returns the current thread's priority.  In the presence of priority
 donation, returns the higher (donated) priority.
 </DL>
-</div>
-</div>
-
+<P>
 
 You need not provide any interface to allow a thread to directly modify
 other threads' priorities.
@@ -442,9 +443,10 @@ The priority scheduler is not used in any later project.
 
 <A NAME="Advanced Scheduler"></A>
 <HR SIZE="6">
-<A NAME="SEC27"></A>
+<A NAME="SEC37"></A>
 <H3> 3. Advanced Scheduler </H3>
-<!--docid::SEC27::-->
+<!--docid::SEC37::-->
+<P>
 
 <div class="panel panel-info">
 <div class="panel-heading">
@@ -454,9 +456,10 @@ The priority scheduler is not used in any later project.
 Implement a multilevel feedback queue scheduler similar to the
 4.4<ACRONYM>BSD</ACRONYM> scheduler to
 reduce the average response time for running jobs on your system.
-See section <A HREF="pintos_7.html#SEC131">B. 4.4<ACRONYM>BSD</ACRONYM> Scheduler</A>, for detailed requirements.
+See section <A HREF="pintos_8.html#SEC141">B. 4.4<ACRONYM>BSD</ACRONYM> Scheduler</A>, for detailed requirements.
 </div>
 </div>
+</P>
 <P>
 
 Like the priority scheduler, the advanced scheduler chooses the thread
@@ -492,9 +495,9 @@ The advanced scheduler is not used in any later project.
 
 <A NAME="Project 1 FAQ"></A>
 <HR SIZE="6">
-<A NAME="SEC28"></A>
+<A NAME="SEC38"></A>
 <H2> FAQ </H2>
-<!--docid::SEC28::-->
+<!--docid::SEC38::-->
 <P>
 
 </P>
@@ -630,7 +633,7 @@ This is just confusing output from the <CODE>backtrace</CODE> program.  It
 does not actually mean that <CODE>pass()</CODE> called <CODE>debug_panic()</CODE>.  In
 fact, <CODE>fail()</CODE> called <CODE>debug_panic()</CODE> (via the <CODE>PANIC()</CODE>
 macro).  GCC knows that <CODE>debug_panic()</CODE> does not return, because it
-is declared <CODE>NO_RETURN</CODE> (see section <A HREF="pintos_10.html#SEC148">E.3 Function and Parameter Attributes</A>), so it doesn't include any code in <CODE>fail()</CODE> to take
+is declared <CODE>NO_RETURN</CODE> (see section <A HREF="pintos_11.html#SEC158">E.3 Function and Parameter Attributes</A>), so it doesn't include any code in <CODE>fail()</CODE> to take
 control when <CODE>debug_panic()</CODE> returns.  This means that the return
 address on the stack looks like it is at the beginning of the function
 that happens to follow <CODE>fail()</CODE> in memory, which in this case happens
@@ -638,7 +641,7 @@ to be <CODE>pass()</CODE>.
 </P>
 <P>
 
-See section <A HREF="pintos_10.html#SEC149">E.4 Backtraces</A>, for more information.
+See section <A HREF="pintos_11.html#SEC159">E.4 Backtraces</A>, for more information.
 </P>
 <P>
 
@@ -699,9 +702,9 @@ kernel thread but the first.
 
 <A NAME="Alarm Clock FAQ"></A>
 <HR SIZE="6">
-<A NAME="SEC29"></A>
+<A NAME="SEC39"></A>
 <H3> Alarm Clock FAQ </H3>
-<!--docid::SEC29::-->
+<!--docid::SEC39::-->
 <P>
 
 </P>
@@ -718,9 +721,9 @@ expect Pintos to have been phased out of the Computer Science curriculum.
 
 <A NAME="Priority Scheduling FAQ"></A>
 <HR SIZE="6">
-<A NAME="SEC30"></A>
+<A NAME="SEC40"></A>
 <H3> Priority Scheduling FAQ </H3>
-<!--docid::SEC30::-->
+<!--docid::SEC40::-->
 <P>
 
 </P>
@@ -863,9 +866,9 @@ acquired and released twice.
 
 <A NAME="Advanced Scheduler FAQ"></A>
 <HR SIZE="6">
-<A NAME="SEC31"></A>
+<A NAME="SEC41"></A>
 <H3> Advanced Scheduler FAQ </H3>
-<!--docid::SEC31::-->
+<!--docid::SEC41::-->
 <P>
 
 </P>
