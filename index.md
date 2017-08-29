@@ -30,6 +30,8 @@ fluent in programming in low-level languages (C and x86 assembly in particular);
 	<dd><b>Office Hour: </b>Tue 4-5pm, Thu 11am-12pm, Malone 231</dd>
 	<dt><h4>Head CA</h4></dt>
 	<dd>Guoye Zhang</dd>
+	<dd><b>Email: </b><a href="mailto:gzhang21@jhu.edu">gzhang21@jhu.edu</a></dd>
+	<dd><b>Office Hour: </b>TBD</dd>
 	<dt><h4>CA</h4></dt>
 	<dd>TBD</dd>
 	<dt><h4>Staff list</h4></dt>
@@ -51,8 +53,9 @@ fluent in programming in low-level languages (C and x86 assembly in particular);
 
 **Other recommended textbooks:**
 * [*Operating Systems: Principles and Practice, 2nd Edition (2014)*](http://recursivebooks.com), by Anderson and Dahlin, Recursive Books, ISBN 978-0985673529
+* [*Operating System Concepts, 8th Edition (2008)*](https://www.amazon.com/Operating-System-Concepts-Abraham-Silberschatz/dp/0470128720), by Silberschatz, Galvin and Gagne, Wiley, ISBN 978-0470128725
+* [*Understanding the Linux Kernel, 3rd Edition (2008)*](https://www.amazon.com/_/dp/0596005652), by Bovet, O'Reilly, ISBN 978-0596005658, (good for projects)
 * [*Modern Operating Systems, 4th Edition (2014)*](https://www.amazon.com/Modern-Operating-Systems-Andrew-Tanenbaum/dp/013359162X), by Tanenbaum and Bos, Pearson, ISBN 978-0133591620 
-* [*Operating System Concepts, 8th Edition (2008)*](https://www.amazon.com/Operating-System-Concepts-Abraham-Silberschatz/dp/0470128720), by Silberschatz, Galvin and Gagne, Wiley, ISBN 978-0470128725.
 
 ## Organization
 
