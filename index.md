@@ -24,14 +24,15 @@ fluent in programming in low-level languages (C and x86 assembly in particular);
 
 <dl class="staff">
 	<dt><h4>Instructor</h4></dt>
-	<dd><strong><a href="http://cs.jhu.edu/~huang">Ryan Huang</a></strong></dd>
+	<dd><strong><a href="https://cs.jhu.edu/~huang">Ryan Huang</a></strong></dd>
 	<dd><b>Email: </b><a href="mailto:huang@cs.jhu.edu">huang@cs.jhu.edu</a></dd>
 	<dd><b>Address: </b>Malone 231</dd>
-	<dd><b>Office Hour: </b>Tue 4-5pm, Thu 11am-12pm, Malone 231</dd>
+	<dd><b>Phone: </b>(410) 516-4522</dd>
+	<dd><b>Office Hours: </b>Tue 4-5pm, Thu 11am-12pm, Malone 231</dd>
 	<dt><h4>Head CA</h4></dt>
 	<dd>Guoye Zhang</dd>
 	<dd><b>Email: </b><a href="mailto:gzhang21@jhu.edu">gzhang21@jhu.edu</a></dd>
-	<dd><b>Office Hour: </b>TBD</dd>
+	<dd><b>Office Hours: </b>Mon, Wed 4:30-6pm, Malone 122 (ugrad lab)</dd>
 	<dt><h4>CA</h4></dt>
 	<dd>TBD</dd>
 	<dt><h4>Staff list</h4></dt>
