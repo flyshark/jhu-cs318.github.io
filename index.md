@@ -27,10 +27,10 @@ fluent in programming in low-level languages (C and x86 assembly in particular);
 	<dd><strong><a href="http://cs.jhu.edu/~huang">Ryan Huang</a></strong></dd>
 	<dd><b>Email: </b><a href="mailto:huang@cs.jhu.edu">huang@cs.jhu.edu</a></dd>
 	<dd><b>Address: </b>Malone 231</dd>
-	<dd><b>Office Hour: </b>TBD</dd>
+	<dd><b>Office Hour: </b>Tue 4-5pm, Thu 11am-12pm, Malone 231</dd>
 	<dt><h4>Head CA</h4></dt>
 	<dd>Guoye Zhang</dd>
-	<dt><h4>CA/TA</h4></dt>
+	<dt><h4>CA</h4></dt>
 	<dd>TBD</dd>
 	<dt><h4>Staff list</h4></dt>
 	<dd><a href="mailto:cs318-staff@cs.jhu.edu">cs318-staff@cs.jhu.edu</a></dd>
@@ -39,7 +39,7 @@ fluent in programming in low-level languages (C and x86 assembly in particular);
 ## Meetings
 
 | **Lecture:**               | Tuesday/Thursday 09:00am-10:15am <br> Ames Hall 234    |
-| **Midterm Exam:**          | Tuesday Oct. 12th, time location TBD                   |
+| **Midterm Exam:**          | Tuesday Oct. 17th, time location TBD                   |
 | **Final Exam:**            | TBD                                                    |
 {: .table .table-bordered .table-hover}
 
