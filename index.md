@@ -33,8 +33,14 @@ fluent in programming in low-level languages (C and x86 assembly in particular);
 	<dd>Guoye Zhang</dd>
 	<dd><b>Email: </b><a href="mailto:gzhang21@jhu.edu">gzhang21@jhu.edu</a></dd>
 	<dd><b>Office Hours: </b>Mon, Wed 4:30-6pm, Malone 122 (ugrad lab)</dd>
-	<dt><h4>CA</h4></dt>
-	<dd>TBD</dd>
+	<dt><h4>CAs</h4></dt>
+	<dd>Dewank Pant</dd>
+	<dd><b>Email: </b><a href="mailto:dewankpant@jhu.edu">dewankpant@jhu.edu</a></dd>
+	<dd><b>Office Hours: </b>TBD</dd>
+  <br>
+	<dd>Ying Liu</dd>
+	<dd><b>Email: </b><a href="mailto:yliu262@jhu.edu">yliu262@jhu.edu</a></dd>
+	<dd><b>Office Hours: </b>TBD</dd>
 	<dt><h4>Staff list</h4></dt>
 	<dd><a href="mailto:cs318-staff@cs.jhu.edu">cs318-staff@cs.jhu.edu</a></dd>
 </dl>
