@@ -18,7 +18,7 @@ layout: default
     <tr>
       <td rowspan="2"><b>Week 1</b></td>
       <td>09/05 Tue</td>
-      <td>Course Intro</td>
+      <td><a href="lectures/lec1_intro.pdf">Course Intro</a></td>
       <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/dialogue-threeeasy.pdf">Chapter 1</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf">Chapter 2</a></td>
       <td> </td>
     </tr>

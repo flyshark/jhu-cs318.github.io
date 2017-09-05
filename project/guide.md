@@ -37,27 +37,27 @@ We will start with a pre-project and then do four substantial projects:
   <tr>
     <td><a href="project0.html">Lab 0: Getting Real</a></td>
     <td>2%</td>
-    <td>09/12 11:59 pm</td>
+    <td>09/14 11:59 pm</td>
   </tr>
   <tr>
     <td><a href="project1.html">Lab 1: Threads</a></td>
     <td>8%</td>
-    <td>09/26 11:59 pm</td>
+    <td>09/29 11:59 pm</td>
   </tr>
   <tr>
     <td><a href="project2.html">Lab 2: User Programs</a></td>
     <td>10%</td>
-    <td>10/13 11:59 pm</td>
+    <td>10/19 11:59 pm</td>
   </tr>
   <tr>
     <td><a href="project3.html">Lab 3: Virtual Memory</a></td>
     <td>14%</td>
-    <td>11/04 11:59 pm</td>
+    <td>11/09 11:59 pm</td>
   </tr>
   <tr>
     <td><a href="project4.html">Lab 4: File Systems</a></td>
     <td>16%</td>
-    <td>11/30 11:59 pm</td>
+    <td>12/07 11:59 pm</td>
   </tr>
   </tbody>
 </table>
@@ -130,6 +130,16 @@ and collect assignments. You do not have to do anything special to submit your p
 We will use a snapshot of your GitHub repository as it exists at the deadline, and 
 grade that version. You can still make changes to your repository after the deadline.
 But we will be only using the snapshot of your code as of the deadline.
+
+<HR SIZE="6">
+### Late Policies
+By default, each team will be given a 72-hour grace period in total that can
+spread in the four labs. It can be used for team members to prepare
+interviews, attend conferences, etc. When you use the grace period tokens, you just
+need to let us know how much of the token you want to use. We won't be asking why. 
+Late submissions without or exceeding grace period will receive penalties 
+as follows: 1 day late, 10% deduction; 2 days late, 30% deduction; 3 days late, 
+60% deduction; after 4 days, no credit.
 
 <HR SIZE="6">
 ### Tips
