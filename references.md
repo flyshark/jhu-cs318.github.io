@@ -14,15 +14,15 @@ to end at once unless it's recommended so.
 
 * You should read everything below before attempting any of the projects:
   - [Getting Started](project/pintos_1.html)
-  - [Coding Standards](project/pintos_8.html)
-  - [Design Document](project/pintos_9.html)
+  - [Coding Standards](project/pintos_9.html)
+  - [Design Document](project/pintos_10.html)
 
 * You need not read the reference guide, but you may find the information in it valuable from time to time:
-  - [Reference Guide](project/pintos_6.html)
+  - [Reference Guide](project/pintos_7.html)
 
 * You'll want to read these once you start work on the projects. Their advice can save you a lot of time:
-  - [Debugging Tools](project/pintos_10.html)
-  - [Development Tools](project/pintos_11.html)
+  - [Debugging Tools](project/pintos_11.html)
+  - [Development Tools](project/pintos_12.html)
 
 * Bracketed notations in Pintos source code comments can be looked up in the [Bibliography](project/pintos_13.html).
   The corresponding manual (e.g., ELF specification) will be fount in the link of the Bibliography.
