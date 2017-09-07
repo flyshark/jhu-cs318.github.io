@@ -24,7 +24,7 @@ layout: default
     </tr>
     <tr>
       <td>09/07 Thu</td>
-      <td>OS Architectural Support</td>
+      <td><a href="lectures/lec2_arch.pdf">OS Architectural Support</a></td>
       <td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf">Chapter 6</a></td>
       <td></td>
     </tr>
