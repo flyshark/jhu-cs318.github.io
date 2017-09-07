@@ -40,7 +40,7 @@ fluent in programming in low-level languages (C and x86 assembly in particular);
   <br>
 	<dd>Ying Liu</dd>
 	<dd><b>Email: </b><a href="mailto:yliu262@jhu.edu">yliu262@jhu.edu</a></dd>
-	<dd><b>Office Hours: Wed, Fri 9:30–11:00am, Malone 239</dd>
+	<dd><b>Office Hours: </b>Wed, Fri 9:30–11:00am, Malone 239</dd>
 	<dt><h4>Staff list</h4></dt>
 	<dd><a href="mailto:cs318-staff@cs.jhu.edu">cs318-staff@cs.jhu.edu</a></dd>
 </dl>
