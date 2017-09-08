@@ -79,6 +79,8 @@ recent version of Ubuntu, Mac OS and Fedora.</b>
   $ export PATH=$PREFIX/bin:$PATH
   $ export LD_LIBRARY_PATH=$PREFIX/lib:$LD_LIBRARY_PATH
   ```
+  For Mac users, the last command is `export DYLD_LIBRARY_PATH=$PREFIX/lib:$DYLD_LIBRARY_PATH` instead.
+
 * GNU binutils:
   - **Download**: 
   ```bash

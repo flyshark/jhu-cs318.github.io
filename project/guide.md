@@ -144,6 +144,23 @@ as follows: 1 day late, 10% deduction; 2 days late, 30% deduction; 3 days late,
 <HR SIZE="6">
 ### Tips
 
+#### GDB Port
+If you are using gdb on the lab machines to debug Pintos, you may encounter 
+a port conflict error. That's because `pintos --gdb` will invoke the `-s` option
+with QEMU, which in turn is a short-hand for `-gdb tcp::1234`. So multiple users
+might try to compete for the same port. We've modified the `pintos` script
+to add two options to work around this.
+
+* `--gdb-port` to specify a port explicitly. You can choose any port that's available 
+  to bind gdb, e.g., `pintos --gdb --gdb-port=2430`. 
+* `--uport` to calculate a port number deterministically based on the user id. 
+  So different users on the lab machines will get a different port. Example: 
+  `pintos --gdb --uport`. You can find the generated port in the command verbose 
+  output (e.g., `qemu-system-i386 ... -gdb tcp::25501`).
+ 
+When you use these two options, you also need to change the `target remote` command 
+in the gdb session to point to the specified/calculated port instead of 1234. 
+
 #### Mac Users
 The original Pintos was mainly developed and tested for Linux (Debian 
 and Ubuntu in particular) and Solaris. It has some issues to run 
